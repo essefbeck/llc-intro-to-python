@@ -38,7 +38,7 @@
       <!-- TODO: Fill in WiFi details -->
       <!-- <div class="heading-bg connected">
         <span class="dark">GET CONNECTED:</span>
-        
+
         <span class="light">NETWORK: network name</span><br>
         <span class="light">PASSWORD: thepassword</span>
       </div> -->
@@ -75,13 +75,13 @@
       <script type="text/template">
         # Today&rsquo;s project
 
-        Imagine you&rsquo;re organizing **National Learn to Code Day 2015**. 
+        Imagine you&rsquo;re organizing **National Learn to Code Day 2015**.
 
         ![](framework/img/workshop/learn-to-code-day.jpg) <!-- .element: class="col-2" -->
 
         You want it to be an *even bigger success* than last year, so not only do you need to know how many people attended (so you can beat that target), but you also want to pull other salient stats to put in a press release.
 
-        News outlets *love* stats. 
+        News outlets *love* stats.
 
         <!-- Computers are very good at repetitive tasks, but they require *precise instructions*. -->
 
@@ -89,7 +89,7 @@
 
         <div class="presenter-notes">
           Whether you take these tools and apply them to your own data or keep using the tools you know, by the end of the day, you&rsquo;ll hopefully have greater confidence in leveraging computers to do your work faster and focus on what matters to you.
-        </div> 
+        </div>
       </script>
     </section>
 
@@ -99,7 +99,7 @@
 
       ###Morning
 
-      * Types 
+      * Types
       * Variables
       * Conditionals &amp; Logic
       * Reading a file
@@ -124,13 +124,13 @@
         * Programming languages have syntax, just like human languages do
 
         <br>
-        ## Why Python Is Awesome
+        ## Why Ruby Is Awesome
 
         *   Free
         *   Open source
-        *   Write once, run anywhere
+        *   Made in Japan!
         *   Great community
-        *   The syntax looks like English
+        *   Designed for readability
 
       </script>
     </section>
@@ -143,10 +143,10 @@
         * Scientific Computing
         * Scripting
         * Testing
-        * Web Applications (Django, Flask)
+        * Web Applications (Ruby on Rails)
         * and some of your favorite websites!
         <!-- * Youtube, Reddit, Pinterest, Instagram, Dropbox, The Onion -->
-
+        <!-- * these need to be changed. Twitter, Shopify, Groupon, Soundcloud, AirBnB -->
         ![](framework/img/workshop/logo-dropbox.png)
         ![](framework/img/workshop/logo-instagram.png)
         ![](framework/img/workshop/logo-pinterest.png)
@@ -175,8 +175,9 @@
 
       You will need:
 
-      1. **Python 2.7.x installed** ( [Mac](https://www.python.org/downloads/), [Windows](https://www.python.org/downloads/windows/) )
-      1. **[PyCharm Educational Edition](https://www.jetbrains.com/pycharm-educational/)**
+      1. **Ruby 2.2.x installed** ( [Mac](https://www.ruby-lang.org/en/downloads/, [Windows](http://rubyinstaller.org/) )
+        -Ruby comes by default on Mac OSX
+      1. **[Atom](https://atom.io/)**
       1. Learner files from LLC (containing the exercise and reference files).
     </section>
 
@@ -201,7 +202,7 @@
 
         The project files contained within the folder will now appear in your sidebar.  Select the arrows to open the folders within. Today, you will be working from the **exercises** folder.  The **reference** folder contains today&rsquo;s project files for reference as an answer key.
 
-        The other folders & files are needed to make this slide presentation work so avoid making edits to them! 
+        The other folders & files are needed to make this slide presentation work so avoid making edits to them!
 
         ![](framework/img/workshop/pycharm-project3.png)
       </script>
@@ -213,7 +214,7 @@
 
         The console is an interactive tool used to test and debug code and it&rsquo;s included in PyCharm!
 
-        Let&rsquo;s open the console: 
+        Let&rsquo;s open the console:
 
         ![Tools &gt; Python Console&hellip;](./framework/img/workshop/open-console1.png)
 
@@ -233,7 +234,7 @@
       <script type="text/template">
         ## Python can do math
 
-        In the console, after the `>>>`, try out these examples.  
+        In the console, after the `>>>`, try out these examples.
 
         The command you input after the `>>>` gets *evaluated* and a value is returned back to you.
 
@@ -308,9 +309,9 @@
       <script type="text/template">
         ## Printing
 
-        The `print()` **function** outputs values to the screen. 
+        The `print()` **function** outputs values to the screen.
 
-        Functions at its most basic definition holds a set of instructions. More on functions later. 
+        Functions at its most basic definition holds a set of instructions. More on functions later.
 
         Also, note the use of quotes.
 
@@ -382,8 +383,8 @@
         ```
 
         <br>
-        We can also fix the `1/2 = 0` error in the previous example.  
-        When Python divides two integers, it doesn&rsquo;t know that the answer isn&rsquo;t an integer so it gets confused. 
+        We can also fix the `1/2 = 0` error in the previous example.
+        When Python divides two integers, it doesn&rsquo;t know that the answer isn&rsquo;t an integer so it gets confused.
 
         Integer **types** don&rsquo;t have decimal parts, so we have to convert to a more precise type, in this case **floats** since this number **type** can handle decimals.
         ```
@@ -443,7 +444,7 @@
         >>> print("Today is " + today)
         Today is Saturday
         ```
-        You can store almost anything in a variable. 
+        You can store almost anything in a variable.
       </script>
     </section>
 
@@ -461,8 +462,8 @@
 
         What do you think the value of `x * y` will be? <span class="delayed">50</span>
 
-        Why?  
-        You changed <!-- .element: class="delayed" -->`y`, but the old value of `x` is still in memory.   
+        Why?
+        You changed <!-- .element: class="delayed" -->`y`, but the old value of `x` is still in memory.
         Python will remember variable names until you close PyCharm or [clear them manually](https://docs.python.org/2/tutorial/datastructures.html#the-del-statement).
       </script>
     </section>
@@ -526,12 +527,12 @@
 
         Typing into the console is fine to start, but do you really want to type your program every time you run it?
 
-        Python can run your code from a file with a `.py` **extension**  
+        Python can run your code from a file with a `.py` **extension**
         *(<!-- .element: class="footnote" -->the letters after `.` in a filename tell your computer which program can run it)*
 
         Let&rsquo;s create our first Python file!
 
-        1. Right-click on the **exercises** folder to create a new file.   
+        1. Right-click on the **exercises** folder to create a new file.
           Then select **New > Python File**
 
           ![Create a new Python File](./framework/img/workshop/new-file-mac.png)
@@ -561,12 +562,12 @@
 
         Code in a file is just text until you **run** it through the Python program.
 
-        1. To run the code saved in your file, select **Run > Run&hellip;**  
+        1. To run the code saved in your file, select **Run > Run&hellip;**
 
-          ![](framework/img/workshop/pycharm-run.png)  
+          ![](framework/img/workshop/pycharm-run.png)
         *<!-- .element: class="footnote" -->Note: PyCharm automatically saves your file before you run it.*
 
-        1. Click on `ex1_hello_world` (again) in the menu popup that appears in the middle of the screen.  
+        1. Click on `ex1_hello_world` (again) in the menu popup that appears in the middle of the screen.
 
           ![Click to run your program](./framework/img/workshop/run-mini-menu.png)
 
@@ -680,7 +681,7 @@
         ... ̺̺̺̺
         ```
 
-        The `...` and auto-indentation is the console signalling that it expects the nested block code.  
+        The `...` and auto-indentation is the console signalling that it expects the nested block code.
         When you're done, press enter twice (or backspace and type `else:` and you'll get your next indented block).
 
         ```python
@@ -702,14 +703,14 @@
 
     <section class="slide" data-markdown>
       <script type="text/template">
-        ## Testing numbers with Math Comparison Operators  
+        ## Testing numbers with Math Comparison Operators
 
         Just as you could check the exact value of a string or number you can use typical math operators to check relative numeric values
 
-        `>`: Greater than  
-        `<`: Less than  
-        `>=`: Greater than or equal to  
-        `<=`: Less than or equal to  
+        `>`: Greater than
+        `<`: Less than
+        `>=`: Greater than or equal to
+        `<=`: Less than or equal to
 
         ```python
         >>> x = 5
@@ -722,7 +723,7 @@
         ...     print(x + " is greater than or equal to 5")
         ... else:
         ...     print(x + " is less than 5")
-        ... 
+        ...
         5 is greater than or equal to 5
         ```
       </script>
@@ -734,7 +735,7 @@
 
         Sometimes, you can&rsquo;t neatly capture your conditions with one expression. You need to combine multiple expressions to determine what to do next.
 
-        `and`: both things must be true  
+        `and`: both things must be true
         `or`: Either one, or both things must be true.
 
         ```python
@@ -743,12 +744,12 @@
 
         >>> if weather == "cold" and snowing == True:
         ...     print("wear a winter jacket")
-        ... 
+        ...
 
         wear a winter jacket
         >>> if weather == "raining" or snowing == True:
         ...     print("bring a change of socks")
-        ... 
+        ...
         bring a change of socks
         ```
       </script>
@@ -771,14 +772,14 @@
         ```python
         >>> if type(x) == float or type(x) == int:
         ...     print("x is a numeric value")
-        ... 
+        ...
         x is a numeric value
         ```
 
         ```python
         >>> if x > 10 and x < 0:
         ...     print("x could never be greater than 10 AND less than 0")
-        ... 
+        ...
         # Nothing prints here
         ```
 
@@ -792,9 +793,9 @@
         ## Exercise 3: Smarter Weather (15mins)
 
         Instead of telling your program if it's cold, you can input the temperature and let it decide what to do.
-        
+
         Open the **ex3_smarter_weather.py** and use math comparison operators as well as `and`/`or` to follow the instructions.
-        
+
         ```
         # if the weather is greater than or equal to 25 degrees
         if "replace this with the right condition":
@@ -812,7 +813,7 @@
 
 <!-- -------------------- -->
 <!-- Opening a file -->
-<!-- -------------------- --> 
+<!-- -------------------- -->
 
     <section class="slide title full-monty">
       <!-- Mandatory Monty Python reference -->
@@ -903,7 +904,7 @@
         >>> chapters = open('./exercises/llc-chapters.csv')
         >>> for line in chapters:
         ...     print(line)
-        ... 
+        ...
         >>> chapters.close()
         ```
 
@@ -935,7 +936,7 @@
 
     <section class="slide title" data-markdown>
       <script type="text/template">
-        # Lunch! 
+        # Lunch!
       </script>
     </section>
 
@@ -963,7 +964,7 @@
 
         In Python, you can **import** the functions and other structures from a **module** so you can use the code without having it in your file. Then you can use functions (and other structures) from that **module** to do your bidding!
 
-        In your console, import the `csv` library as follows. 
+        In your console, import the `csv` library as follows.
 
         ```python
         >>> import csv
@@ -990,14 +991,14 @@
 
         * First we open the file
         * Then, we import the `csv` library
-        * Then we pass the file into `DictReader` to make sense of it 
+        * Then we pass the file into `DictReader` to make sense of it
 
           ```
           >>> import csv
           >>> chapters_file = open('./exercises/llc-chapters.csv')
           >>> chapters_data = csv.DictReader(chapters_file)
           ```
-        * Now, we can pull out one row at a time  
+        * Now, we can pull out one row at a time
 
           ```
           >>> chapter = chapters_data.next()
@@ -1067,15 +1068,15 @@
         ```python
         # Import the csv library
         import csv
-        
+
         # Open the 'llc-chapters.csv' file
-        
+
         # Convert it to a csv_data structure
-        
+
         # Loop through each of the rows
-        
+
             # Compare the 'City' in the row with your city
-        
+
                 # Print "Thank you [[Chapter Lead(s)]]!"
         ```
       </script>
@@ -1086,7 +1087,7 @@
       <script type="text/template">
         ## Counting loops
 
-        Sometimes you want to keep track of the number of times something happened. 
+        Sometimes you want to keep track of the number of times something happened.
 
         We can add `1` to the current value of a variable, and assign it back to the same variable. Python processes everything to the right of the `=` before assignining the result.
 
@@ -1136,7 +1137,7 @@
         -1
         ```
 
-        The `.find()` function is case-sensitive – it will only match the *exact* string you pass it, even if the only difference is `C` vs `c`.  
+        The `.find()` function is case-sensitive – it will only match the *exact* string you pass it, even if the only difference is `C` vs `c`.
         *<!-- .element: class="footnote" --> When we said computers require **exact** instructions, we meant it!*
       </script>
     </section>
@@ -1155,34 +1156,34 @@
         >>> leads = "Nancy & Cassie"
         >>> if leads.find("&") >= 0:
         ...     print(leads + " are co-leads")
-        ... 
+        ...
         Nancy & Cassie are co-leads
         ```
 
         Create a new file **ex5_coleaders.py** and use what you've learned to find co-leaders.
-        
-        * Print a list of cities with co-leads 
+
+        * Print a list of cities with co-leads
         * Count how many chapters have co-leads
       </script>
     </section>
-    
+
     <section class="slide title" data-markdown>
       <script type="text/template">
         # So what? I can count all this stuff myself!
       </script>
     </section>
-    
+
     <section class="slide" data-markdown>
       <script type="text/template">
         ## Going bigger
 
         So far, we've kept the examples small so you can look at the CSV file yourself and see the patterns.
-        
+
         In 2014, Ladies Learning Code had nearly 6500 participants and volunteers involved in events (not accounting for people who attended multiple events).
-        
+
           Do you want to count those?
 
-          ![Nope, not doing that.](http://33.media.tumblr.com/11c6f192a380836be3282b4777addc32/tumblr_mumzzcS9Ug1s410g9o1_500.gif) 
+          ![Nope, not doing that.](http://33.media.tumblr.com/11c6f192a380836be3282b4777addc32/tumblr_mumzzcS9Ug1s410g9o1_500.gif)
 
         Computers will churn through repetitive tasks according to your instructions without stopping for coffee.
 
@@ -1191,57 +1192,57 @@
     </section>
 <!-- -------------------- -->
 <!-- Begin final exercises -->
-<!-- -------------------- --> 
+<!-- -------------------- -->
     <section class="slide" data-markdown>
       <script type="text/template">
         ## Final Exercise
-        
+
         In order to promote **National Learn to Code Day 2015**, and measure its success relative to 2014, we'll need some stats:
-        
+
         * Number of people signed up for "National Learn to Code Day"
         * Total number people registered for "Kids Learning Code" or "Girls Learning Code" events throughout the year
         * Total number people involved in youth-oriented "National Learn to Code Day"
-        
+
       </script>
     </section>
 
     <section class="slide" data-markdown>
       <script type="text/template">
         ## Things we didn't cover
-        
+
         ### Writing results to a CSV file
-        
+
         * Just like `DictReader` there's a `DictWriter` in the csv package
         * Gather data then write out the headers and data to a file
         * Useful for filtering a big set of data down to something you can analyse in a spreadsheet program
         * See `reference/bonus_writing_csv.py`
-        
+
         ### Reading files in other languages (like French)
-        
+
         * Python 2.x defaults to ASCII (very basic letters and numbers)
         * Most text on the internet with accents or foreign characters (Arabic, Chinese, etc.) are represented in [unicode](http://www.w3.org/International/questions/qa-what-is-encoding.en)
-        * You can install the [unicodecsv](https://pypi.python.org/pypi/unicodecsv/0.13.0) package with [pip](http://www.dabapps.com/blog/introduction-to-pip-and-virtualenv-python/) and it will read and write CSV files containing accents and other characters 
-        
+        * You can install the [unicodecsv](https://pypi.python.org/pypi/unicodecsv/0.13.0) package with [pip](http://www.dabapps.com/blog/introduction-to-pip-and-virtualenv-python/) and it will read and write CSV files containing accents and other characters
+
       </script>
-    </section> 
+    </section>
 
     <section class="slide" data-markdown>
       <script type="text/template">
         ## Resources
-        
+
         ### Tutorials/Courses:
-        
+
         * [The (Official) Python Tutorial](http://docs.python.org/2.7/tutorial/)
         * [Full Stack Python](http://www.fullstackpython.com)
         * [Udacity - Learn Object Oriented Python](http://www.udacity.com/course/programming-foundations-with-python--ud036)
 
         ### Web Development with Python:
-        
+
         * [Django](https://www.djangoproject.com/)
         * [Hello Web App](https://www.hellowebapp.com/)
-        
+
         ### Other:
-        
+
         * [Raspberry pi](https://www.raspberrypi.org/)
         * [mySQL connector](http://dev.mysql.com/doc/connector-python/en/)
       </script>
