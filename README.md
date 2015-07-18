@@ -1,10 +1,10 @@
 #Ladies Learning Code
 
-##Intro to Python
+##Intro to Ruby
 
-A full day introductory Python workshop.
+A full day introductory Ruby workshop.
 
-Created by [Gabriel Gosselin](https://twitter.com/fggosselin) and [Darcie Milliken](https://twitter.com/derushie) for Ladies Learning Code.
+Created by [Sarah Beck](https://twitter.com/essefbeck) and [Trudy MacNabb]() based of introduction to python created by [Gabriel Gosselin](https://twitter.com/fggosselin) and [Darcie Milliken](https://twitter.com/derushie) for Ladies Learning Code.
 
 **Instructors:** Please refer to https://github.com/ladieslearningcode/llc-slidedeck-template/slides.html for instructions for customization of the slide deck and features. If there are any issues or fixes required for this workshop slide presentation, please open an issue, submit a pull request or email [christina@ladieslearningcode.com](mailto:christina@ladieslearningcode.com).
 
