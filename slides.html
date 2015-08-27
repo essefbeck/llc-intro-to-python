@@ -291,6 +291,7 @@
         ```ruby
         >>> def add(a, b)
         ...     return a + b
+        ...     end
         ...
         >>> add(1, 2)
         3
@@ -348,11 +349,14 @@
 
         ```ruby
         >>> print(2 + "2")
-        Traceback (most recent call last):
-        File "<input>", line 1, in <module>
-        TypeError: unsupported operand type(s) for +: 'int' and 'str'
+        TypeError: String can&rsquo;t be coerced into Fixnum
+
         ```
       </script>
+        <!-- I changed  because this is the error I get in IRB --TM -->
+        <!-- Traceback (most recent call last):
+        File "<input>", line 1, in <module>
+        TypeError: unsupported operand type(s) for +: 'int' and 'str'-->
     </section>
 
     <section class="slide" data-markdown>
@@ -364,9 +368,7 @@
 
         ```ruby
         >>> print(2 + "2")
-        Traceback (most recent call last):
-        File "<input>", line 1, in <module>
-        TypeError: unsupported operand type(s) for +: 'int' and 'str'
+        TypeError: String can&rsquo;t be coerced into Fixnum
         ```
 
         * The first `2`, inside of `print(2 + "2")` is an integer.
@@ -374,6 +376,9 @@
         * ruby can&rsquo;t figure out how to add a number and string, so it spits out an error.
 
       </script>
+       <!-- Traceback (most recent call last):
+        File "<input>", line 1, in <module>
+        TypeError: unsupported operand type(s) for +: 'int' and 'str'-->
     </section>
 
 <!-- -------------------- -->
@@ -387,21 +392,28 @@
         We can tell ruby how to convert that `"2"` into a number and **change the type**. In this case, change the string to an integer (whole number) using the `int()` function.  Try it in your console.
 
         ```
-        >>> print(2 + int("2"))
+        >>> print(2 + "2".to_i)
         4
         ```
 
-        <br>
-        We can also fix the `1/2 = 0` error in the previous example.
-        When ruby divides two integers, it doesn&rsquo;t know that the answer isn&rsquo;t an integer so it gets confused.
+        Now try dividing 2 numbers
 
-        Integer **types** don&rsquo;t have decimal parts, so we have to convert to a more precise type, in this case **floats** since this number **type** can handle decimals.
         ```
-        >>> print(float(1) / float(2))
+        >>> print(1 / 2)
+        0
+        ```
+        This happens because Ruby sees 2 integers and will return an integer.
+        <br>
+
+        Integer **classes** don&rsquo;t have decimal parts, so we have to convert to a more precise class, in this case **floats** since this number **class** can handle decimals.
+        ```
+        >>> print(1.to_f / 2.to_f)
         0.5
         ```
 
       </script>
+       <!--  // We can also fix the `1/2 = 0` error in the previous example.
+        // When ruby divides two integers, it doesn&rsquo;t know that the answer isn&rsquo;t an integer so it gets confused. -->
     </section>
 
     <section class="slide" data-markdown>
@@ -412,15 +424,13 @@
 
         ```
         >>> print(99 + " bottles of beer on the wall")
-        Traceback (most recent call last):
-        File "<input>", line 1, in <module>
-        TypeError: cannot concatenate 'str' and 'int' objects
+        TypeError: String cant be coerced into Fixnum
 
         ```
-        Use the `str()` function to convert a number to a string.
+        Use the `.to_s` function to convert a number to a string.
 
         ```
-        >>> print(str(99) + " bottles of beer on the wall")
+        >>> print(99.to_s + " bottles of beer on the wall")
 
         ```
 
