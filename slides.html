@@ -258,24 +258,24 @@
       <script type="text/template">
         ## Data Types
 
-        We just used the *integer* number **type** but there are many more.
+        We just used the *integer* number **class** but there are many more.
 
-        * Integer (`int`, whole numbers)
-        * Float (`float`, numbers containing decimals)
-        * String (`str`, words, sentences, literal text)
+        * Integer (whole numbers)
+        * Float (numbers containing decimals)
+        * String (words, sentences, literal text)
         * Boolean (`True`, `False`)
         * [and many more!](https://en.wikibooks.org/wiki/Ruby_Programming/Data_types)
-        * Use `type()` and a data value inside the parentheses to figure out the type.
+        * Use `.class` and a data value inside the parentheses to figure out the type.
 
         ```
-        >>> type("hello")
-        <type 'str'>
+        >>> "hello".class
+        => String
 
-        >>> type(42)
-        <type 'int'>
+        >>> 42.class
+        => Fixnum
 
-        >>> type(3.14159)
-        <type 'float'>
+        >>> 3.14159.class
+        => Float
         ```
       </script>
     </section>
