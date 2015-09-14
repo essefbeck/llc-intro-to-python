@@ -349,7 +349,7 @@
 
         ```ruby
         >>> print(2 + "2")
-        TypeError: String can&rsquo;t be coerced into Fixnum
+        TypeError: String can'/'t be coerced into Fixnum
 
         ```
       </script>
@@ -494,7 +494,7 @@
         * Variable names can only use letters, numbers and the underscore (`_`); no spaces
         * In ruby, you separate words with the `_`; ex. `ladies_learning_code`
         * They cannot begin with a number; `1day` gives you an error while `day1` is fine
-        * The names we'll use today are descriptive, but otherwise have no special meaning to ruby
+        * The names we&rsquo;ll use today are descriptive, but otherwise have no special meaning to ruby
       </script>
     </section>
 
@@ -523,18 +523,28 @@
 
         We&rsquo;ve already used the console to put a 'Hello World' message on the screen, so why not take it one step further and have ruby say hello to anyone?
 
-        ruby has a `raw_input()` function that gets data typed by a user and **returns** that value to you.
+        ruby has a `gets` method that gets data typed by a user and **returns** that value to you.
 
-        1. You give `raw_input()` a message to let your user know what you&rsquo;re looking for
+        ruby returns the value with a `\n` appended to the input.  This is ruby putting a new line after the input.  We add the method `chomp` to remove this.  `chomp` removes the last character of a string.
+
+
+        1. You give a `puts` message to let your user know what you&rsquo;re looking for
+        1. You write a variable and assign the value of `gets` to it (you add `chomp` to remove the new line character)
         1. The user types something and hits the **enter** key
         1. Whatever the user types is **returned** to you.
 
         Let&rsquo;s try it in your console:
 
         ```ruby
-        >>> raw_input("What's your name?")
+        >>> puts "What's your name?"
         ```
-        It outputs `What's your name?`
+        It outputs `What''s your name?`
+
+        ```ruby
+        >>> name = gets.chomp
+        ```
+
+        We assign the value of what is gotten to the name variable
 
         You type in your name, press **enter**, and it will print it out on the next line.
       </script>
