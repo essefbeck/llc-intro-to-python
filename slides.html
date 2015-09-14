@@ -556,32 +556,33 @@
 
         Typing into the console is fine to start, but do you really want to type your program every time you run it?
 
-        ruby can run your code from a file with a `.py` **extension**
+        ruby can run your code from a file with a `.rb` **extension**
         *(<!-- .element: class="footnote" -->the letters after `.` in a filename tell your computer which program can run it)*
 
         Let&rsquo;s create our first ruby file!
 
-        1. Right-click on the **exercises** folder to create a new file.
-          Then select **New > ruby File**
+        1. Open Atom and choose ***New File*** from the ***File*** menu. Then choose ***Save as...*** from the file menu.
 
-          ![Create a new ruby File](./framework/img/workshop/new-file-mac.png)
+          ![Create a new ruby File](./framework/img/workshop/saving-ruby-file.png)
 
-        1. Enter the name `ex1_hello_world.py` in the popup box.
+        1. Enter the name `hello.rb` in the popup box.
 
           ![new ruby file name](framework/img/workshop/new-ruby-file.png)
 
         1. Now we can add our simple program to the file
 
           ```ruby
-          # Assign the raw_input value to a variable
+          # Ask user for input
+          # Assign the input value to a variable
           # Your program waits for the user to hit enter
-          name = raw_input("Please enter your name: ")
+          print "Please enter your name: "
+          name = gets.chomp
 
           # … then continues to this line
           print("Hello " + name)
           ```
 
-        Now how do we get PyCharm to run this file?
+        Now how do we use the `Terminal` to run this file?
       </script>
     </section>
 
@@ -591,18 +592,20 @@
 
         Code in a file is just text until you **run** it through the ruby program.
 
-        1. To run the code saved in your file, select **Run > Run&hellip;**
+        1. Open up your `Terminal` and move to the location your file is saved
+            *  `cd` means **Change Directory** and is used to move through the file structure
+            *  `ls` is used to **List** the files in the current directory
 
-          ![](framework/img/workshop/pycharm-run.png)
-        *<!-- .element: class="footnote" -->Note: PyCharm automatically saves your file before you run it.*
+          ![](framework/img/workshop/commandline.gif)
+        
 
-        1. Click on `ex1_hello_world` (again) in the menu popup that appears in the middle of the screen.
+        1. Once in the correct directory, type `ruby hello.rb` and hit `Enter` to run your program.
 
-          ![Click to run your program](./framework/img/workshop/run-mini-menu.png)
+          ![Click to run your program](./framework/img/workshop/run-ruby.png)
 
-        1. Now click into the console window that opened, type your name and press the **Enter** key. You should see your name repeated back at you.
+        1. Once you hit `Enter` the program will run.  The program should ask you for your name.  Type in your name and hit `Enter` again and it will say hello to you.
 
-          ![Demo of hello_world example](./framework/img/workshop/ex1-hello-world.png)
+          ![Demo of hello_world example](./framework/img/workshop/ruby-output.png)
 
         1. You can run your program as many times as you like by repeating the steps above.
       </script>
@@ -634,7 +637,7 @@
         # Still not real code
         if it is cold outside:
             wear a sweater
-        elif it is raining:
+        elsif it is raining:
             bring an umbrella
         else:
             dress normally :)
