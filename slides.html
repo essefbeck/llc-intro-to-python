@@ -625,22 +625,24 @@
 
         ```ruby
         # Not real code
-        if it is cold outside:
+        if it is cold outside
             wear a sweater
-        else:
+        else
             dress normally :)
+        end
         ```
 
         You can also have more than one condition.
 
         ```ruby
         # Still not real code
-        if it is cold outside:
+        if it is cold outside
             wear a sweater
-        elsif it is raining:
+        elsif it is raining
             bring an umbrella
-        else:
+        else
             dress normally :)
+        end
         ```
       </script>
     </section>
@@ -677,20 +679,22 @@
       <script type="text/template">
         ## Class Exercise 2: Weather
 
-        Create a new file `ex2_weather_advice.py` and write out the code snippet below (avoid the temptation of copy-paste).
-
-        Note the syntax and **indentation** (whitespace is very important in ruby). Try to understand each line as you type it.
+        Create a new file `weather_advice.rb` and write out the code snippet below (avoid the temptation of copy-paste).
+          
+          Try to understand each line as you type it.
 
         ```ruby
-        # file: ex2_weather_advice.py
-        weather = raw_input("What is the weather? (cold, raining, etc.)")
+        # file: weather_advice.rb
+        print "What is the weather? (cold, raining, etc.)"
+        weather = gets.chomp
 
-        if weather == "cold":
+        if weather == "cold"
             print("Wear a sweater!")
-        elif weather == "raining":
+        elsif weather == "raining"
             print("Bring an umbrella")
-        else:
+        else
             print("Dress normally :)")
+        end
         ```
 
         Try running your file a few times to get different advice (the weather is so unpredictable!)
@@ -700,7 +704,8 @@
       </script>
     </section>
 
-    <section class="slide" data-markdown>
+<!-- Ruby doesn't use indentation like Python - Trudy -->
+<!--     <section class="slide" data-markdown>
       <script type="text/template">
         ## Indentation
 
@@ -727,6 +732,35 @@
         IndentationError: expected an indented block
         ```
       </script>
+    </section> -->
+
+<!-- So I created a slide on String Interpolation - Trudy -->
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        ## String Interpolation
+
+        ruby uses string Interpolation to add variables to strings for output.
+
+        When you want to print results ruby needs a way of knowing what is meant to be the exact word and what is meant to be a variable.
+
+        ```ruby
+        >>> if weather == "cold"
+              print "the weather today is #{weather}"
+            end
+        ```
+
+        The `#{weather}` tells ruby to use the variable weather, rather than just outputing the word 'weather'.
+        Try typing each example into the command line.
+
+        ```ruby
+        >>> weather = "cold"
+        >>> print "the weather today is weather" 
+        ```
+        ```ruby
+        >>> weather = "sunny"
+        >>> print "the weather today is #{weather}"
+        ```
+      </script>
     </section>
 
 <!-- -------------------- -->
@@ -747,14 +781,15 @@
         ```ruby
         >>> x = 5
         >>> print(x > 5)
-        False
+        False => nil
         >>> print(x >= 5)
-        True
+        True => nil
 
-        >>> if x >= 5:
-        ...     print(x + " is greater than or equal to 5")
-        ... else:
-        ...     print(x + " is less than 5")
+        >>> if x >= 5
+        ...     print " #{x} is greater than or equal to 5" 
+        ... else
+        ...     print " #{x} is less than 5"
+        ... end
         ...
         5 is greater than or equal to 5
         ```
@@ -774,14 +809,14 @@
         weather = "cold"
         snowing = True
 
-        >>> if weather == "cold" and snowing == True:
-        ...     print("wear a winter jacket")
-        ...
+        >>> if weather == "cold" and snowing == True
+        ...     print "wear a winter jacket" 
+        ...   end
 
         wear a winter jacket
-        >>> if weather == "raining" or snowing == True:
-        ...     print("bring a change of socks")
-        ...
+        >>> if weather == "raining" or snowing == True
+        ...     print "bring a change of socks" 
+        ...   end
         bring a change of socks
         ```
       </script>
@@ -795,23 +830,23 @@
 
         ```ruby
         >>> x = 5
-        >>> if x > 0 and x < 6:
-        ...     print("x is between 0 and 6.")
-        ...
+        >>> if x > 0 and x < 6
+        ...     print "x is between 0 and 6." 
+        ...   end
         x is between 0 and 6.
         ```
 
         ```ruby
-        >>> if type(x) == float or type(x) == int:
-        ...     print("x is a numeric value")
-        ...
+        >>> if x.class == Float or x.class == Fixnum
+        ...     print "x is a numeric value" 
+        ...   end
         x is a numeric value
         ```
 
         ```ruby
-        >>> if x > 10 and x < 0:
+        >>> if x > 10 and x < 0
         ...     print("x could never be greater than 10 AND less than 0")
-        ...
+        ...   end
         # Nothing prints here
         ```
 
@@ -824,9 +859,9 @@
       <script type="text/template">
         ## Exercise 3: Smarter Weather (15mins)
 
-        Instead of telling your program if it's cold, you can input the temperature and let it decide what to do.
+        Instead of telling your program if it&rsquo;s cold, you can input the temperature and let it decide what to do.
 
-        Open the **ex3_smarter_weather.py** and use math comparison operators as well as `and`/`or` to follow the instructions.
+        Open the **smarter_weather.rb** and use math comparison operators as well as `and`/`or` to follow the instructions.
 
         ```
         # if the weather is greater than or equal to 25 degrees
