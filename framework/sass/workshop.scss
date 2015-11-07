@@ -27,9 +27,9 @@
 
 
 .slide {
-  &.full-monty {
-    background: url(../img/workshop/monty-python.jpg) no-repeat;
-    background-size: cover;
+  &.ruby-background {
+    background: url(../img/workshop/rubybg.jpg) no-repeat;
+    background-size: contain;
 
     h1 {
       color: #fff;

@@ -195,7 +195,7 @@
         Open Atom and select **Add Project Folder...** from the **File** menu. Then navigate to the **llc-intro-to-ruby-master** folder & select **Open**.
 
         ![](framework/img/workshop/atom.gif)
-        
+
 
         The project files contained within the folder will now appear in your sidebar.  Select the arrows to open the folders within. Today, you will be working from the **exercises** folder.  The **reference** folder contains today&rsquo;s project files for reference as an answer key.
 
@@ -218,7 +218,7 @@
 
         ![ruby Console in PyCharm](./framework/img/workshop/open-console2.png)
 
-        Now you can type code after the green `>>>` symbol. It is used by the console to represent a space for you to enter your input but you don&rsquo;t have to actually type it.  You can also open and close the console by selecting the icon in the lower right of PyCharm.
+        Now you can type code after the green `irb(main):001:0>` symbol. It is used by the console to represent a space for you to enter your input but you don&rsquo;t have to actually type it.  You can also open and close the console by selecting the icon in the lower right of PyCharm.
       </script>
     </section>
 
@@ -230,22 +230,22 @@
       <script type="text/template">
         ## Ruby can do math
 
-        In the console, after the `>>>`, try out these examples.
+        In the console, after the `irb(main):001:0>`, try out these examples.
 
-        The command you input after the `>>>` gets *evaluated* and a value is returned back to you.
+        The command you input after the `irb(main):001:0>` gets *evaluated* and a value is returned back to you.
 
         ```
-        >>> 2 + 2
+        irb(main):001:0> 2 + 2
         4
         ```
 
         ```
-        >>> 2 * 15
+        irb(main):001:0> 2 * 15
         30
         ```
 
         ```
-        >>> 1 / 2
+        irb(main):001:0> 1 / 2
         0
         ```
         Why is `1 / 2 = 0`? We&rsquo;ll come back to that.
@@ -267,13 +267,13 @@
         * Use `.class` and a data value inside the parentheses to figure out the type.
 
         ```
-        >>> "hello".class
+        irb(main):001:0> "hello".class
         => String
 
-        >>> 42.class
+        irb(main):001:0> 42.class
         => Fixnum
 
-        >>> 3.14159.class
+        irb(main):001:0> 3.14159.class
         => Float
         ```
       </script>
@@ -288,13 +288,13 @@
         * Ex. the `add` function takes `a` and `b` as arguments and will **return** the result
 
         ```ruby
-        >>> def add(a, b)
+        irb(main):001:0> def add(a, b)
         ...     return a + b
         ...     end
         ...
-        >>> add(1, 2)
+        irb(main):001:0> add(1, 2)
         3
-        >>> add(3, 4)
+        irb(main):001:0> add(3, 4)
         7
         ```
 
@@ -313,12 +313,12 @@
         Also, note the use of quotes.
 
         ```
-        >>> puts "Hello World!"
+        irb(main):001:0> puts "Hello World!"
         Hello World!
         ```
 
         ```
-        >>> puts 2 + 2
+        irb(main):001:0> puts 2 + 2
         4
         ```
       </script>
@@ -341,13 +341,13 @@
         ## Concatenation
          You can "add" strings together, and that&rsquo;s called **concatenation**. It  joins multiple strings into one.
         ```
-        >>> print("Hello " + "World!")
+        irb(main):001:0> print("Hello " + "World!")
         Hello World!
         ```
         But what if we try to join a string and a number?
 
         ```ruby
-        >>> print(2 + "2")
+        irb(main):001:0> print(2 + "2")
         TypeError: String can'/'t be coerced into Fixnum
 
         ```
@@ -366,7 +366,7 @@
 
 
         ```ruby
-        >>> print(2 + "2")
+        irb(main):001:0> print(2 + "2")
         TypeError: String can&rsquo;t be coerced into Fixnum
         ```
 
@@ -391,14 +391,14 @@
         We can tell ruby how to convert that `"2"` into a number and **change the type**. In this case, change the string to an integer (whole number) using the `int()` function.  Try it in your console.
 
         ```
-        >>> print(2 + "2".to_i)
+        irb(main):001:0> print(2 + "2".to_i)
         4
         ```
 
         Now try dividing 2 numbers
 
         ```
-        >>> print(1 / 2)
+        irb(main):001:0> print(1 / 2)
         0
         ```
         This happens because Ruby sees 2 integers and will return an integer.
@@ -406,7 +406,7 @@
 
         Integer **classes** don&rsquo;t have decimal parts, so we have to convert to a more precise class, in this case **floats** since this number **class** can handle decimals.
         ```
-        >>> print(1.to_f / 2.to_f)
+        irb(main):001:0> print(1.to_f / 2.to_f)
         0.5
         ```
 
@@ -422,14 +422,14 @@
         ruby can also be used to convert numbers to strings.
 
         ```
-        >>> print(99 + " bottles of beer on the wall")
+        irb(main):001:0> print(99 + " bottles of beer on the wall")
         TypeError: String cant be coerced into Fixnum
 
         ```
         Use the `.to_s` function to convert a number to a string.
 
         ```
-        >>> print(99.to_s + " bottles of beer on the wall")
+        irb(main):001:0> print(99.to_s + " bottles of beer on the wall")
 
         ```
 
@@ -451,15 +451,15 @@
         * Use the equal (`=`) symbol to assign a value to a variable
 
         ```ruby
-        >>> x = 5
-        >>> y = 4
-        >>> x * y
+        irb(main):001:0> x = 5
+        irb(main):001:0> y = 4
+        irb(main):001:0> x * y
         20
         ```
 
         ```ruby
-        >>> today = "Saturday"
-        >>> print("Today is " + today)
+        irb(main):001:0> today = "Saturday"
+        irb(main):001:0> print("Today is " + today)
         Today is Saturday
         ```
         You can store almost anything in a variable.
@@ -474,8 +474,8 @@
 
         ```ruby
         # Remember, we've already set x = 5 and y = 4
-        >>> y = 10
-        >>> x * y
+        irb(main):001:0> y = 10
+        irb(main):001:0> x * y
         ```
 
         What do you think the value of `x * y` will be? <span class="delayed">50</span>
@@ -535,12 +535,12 @@
         Let&rsquo;s try it in your console:
 
         ```ruby
-        >>> puts "What's your name?"
+        irb(main):001:0> puts "What's your name?"
         ```
         It outputs `What''s your name?`
 
         ```ruby
-        >>> name = gets.chomp
+        irb(main):001:0> name = gets.chomp
         ```
 
         We assign the value of what is gotten to the name variable
@@ -596,7 +596,7 @@
             *  `ls` is used to **List** the files in the current directory
 
           ![](framework/img/workshop/commandline.gif)
-        
+
 
         1. Once in the correct directory, type `ruby hello.rb` and hit `Enter` to run your program.
 
@@ -655,14 +655,14 @@
         Reminder, one equals symbol only *assigns* a value to the variable.
 
         ```ruby
-        >>> weather = "raining"
+        irb(main):001:0> weather = "raining"
         ```
 
         Test the values. The double equals symbol (`==`) will evaluate if the value on the right matches the assigned value.
         ```
-        >>> weather == "cold"
+        irb(main):001:0> weather == "cold"
         False
-        >>> weather == "raining"
+        irb(main):001:0> weather == "raining"
         True
         ```
         We can use these *statements* with our `if` values to test for our weather conditions
@@ -679,7 +679,7 @@
         ## Class Exercise 2: Weather
 
         Create a new file `weather_advice.rb` and write out the code snippet below (avoid the temptation of copy-paste).
-          
+
           Try to understand each line as you type it.
 
         ```ruby
@@ -713,7 +713,7 @@
         When you're typing out examples that use an `if` or `else` in the console, you'll see this:
 
         ```ruby
-        >>> if weather == "cold":
+        irb(main):001:0> if weather == "cold":
         ... ̺̺̺̺
         ```
 
@@ -721,7 +721,7 @@
         When you're done, press enter twice (or backspace and type `else:` and you'll get your next indented block).
 
         ```ruby
-        >>> if weather == "cold":
+        irb(main):001:0> if weather == "cold":
         ...     print("Wear a sweater!")
         ... else:
         ... print("Dress normally :)")
@@ -743,7 +743,7 @@
         When you want to print results ruby needs a way of knowing what is meant to be the exact word and what is meant to be a variable.
 
         ```ruby
-        >>> if weather == "cold"
+        irb(main):001:0> if weather == "cold"
               print "the weather today is #{weather}"
             end
         ```
@@ -752,12 +752,12 @@
         Try typing each example into the command line.
 
         ```ruby
-        >>> weather = "cold"
-        >>> print "the weather today is weather" 
+        irb(main):001:0> weather = "cold"
+        irb(main):001:0> print "the weather today is weather"
         ```
         ```ruby
-        >>> weather = "sunny"
-        >>> print "the weather today is #{weather}"
+        irb(main):001:0> weather = "sunny"
+        irb(main):001:0> print "the weather today is #{weather}"
         ```
       </script>
     </section>
@@ -778,14 +778,14 @@
         `<=`: Less than or equal to
 
         ```ruby
-        >>> x = 5
-        >>> print(x > 5)
+        irb(main):001:0> x = 5
+        irb(main):001:0> print(x > 5)
         False => nil
-        >>> print(x >= 5)
+        irb(main):001:0> print(x >= 5)
         True => nil
 
-        >>> if x >= 5
-        ...     print " #{x} is greater than or equal to 5" 
+        irb(main):001:0> if x >= 5
+        ...     print " #{x} is greater than or equal to 5"
         ... else
         ...     print " #{x} is less than 5"
         ... end
@@ -808,13 +808,13 @@
         weather = "cold"
         snowing = True
 
-        >>> if weather == "cold" and snowing == True
-        ...     print "wear a winter jacket" 
+        irb(main):001:0> if weather == "cold" and snowing == True
+        ...     print "wear a winter jacket"
         ...   end
 
         wear a winter jacket
-        >>> if weather == "raining" or snowing == True
-        ...     print "bring a change of socks" 
+        irb(main):001:0> if weather == "raining" or snowing == True
+        ...     print "bring a change of socks"
         ...   end
         bring a change of socks
         ```
@@ -828,22 +828,22 @@
         Take note! Whereas in math notation you can write `0 < x < 6`, in ruby you need to split these into separate comparisons
 
         ```ruby
-        >>> x = 5
-        >>> if x > 0 and x < 6
-        ...     print "x is between 0 and 6." 
+        irb(main):001:0> x = 5
+        irb(main):001:0> if x > 0 and x < 6
+        ...     print "x is between 0 and 6."
         ...   end
         x is between 0 and 6.
         ```
 
         ```ruby
-        >>> if x.class == Float or x.class == Fixnum
-        ...     print "x is a numeric value" 
+        irb(main):001:0> if x.class == Float or x.class == Fixnum
+        ...     print "x is a numeric value"
         ...   end
         x is a numeric value
         ```
 
         ```ruby
-        >>> if x > 10 and x < 0
+        irb(main):001:0> if x > 10 and x < 0
         ...     print("x could never be greater than 10 AND less than 0")
         ...   end
         # Nothing prints here
@@ -882,26 +882,25 @@
 <!-- Opening a file -->
 <!-- -------------------- -->
 
-    <section class="slide title full-monty">
-      <!-- Mandatory Monty ruby reference -->
-      <h1 class="heading-bg"><span>And now for something completely different</span></h1>
+    <section class="slide title ruby-background">
+      <h1 class="heading-bg"><span>And now for something new and shiny!</span></h1>
 
-      <aside>Source: <a href="https://www.flickr.com/photos/nerdcoreblog/13995269592/">flickr.com/photos/nerdcoreblog</a></aside>
+      <aside>Source: <a href="http://photo.elsoar.com">http://photo.elsoar.com</a></aside>
     </section>
 
     <section class="slide" data-markdown>
       <script type="text/template">
         ## Opening a file
 
-        We typically store computer data in files. The data in some files is human-readable text (while in others, like images, it&rsquo;s in a format that&rsquo;s only readable by programs with specific code to interpret the data).
+        We typically store computer data in files. The data in some files have text (while in others, like images, are&rsquo;s in a format that&rsquo;s only readable by computers).
 
-        It&rsquo;s fairly easy in ruby to open a human-readable file and print the contents to the screen.
+        It&rsquo;s fairly easy in ruby to open a text file and print the contents to the screen.
 
         ```ruby
-        >>> chapters = open('./exercises/llc-chapters.csv')
-        >>> print(chapters.read())
+        irb(main):001:0> chapters = File.open(".../llc-intro-to-ruby/exercises/llc-chapters.csv")
+        irb(main):001:0> puts chapters.read()
         # … lots of file data …
-        >>> chapters.close()
+        irb(main):001:0> chapters.close()
         # When you're done with a file it's a good idea to close it
         ```
       </script>
@@ -918,17 +917,17 @@
         Let&rsquo;s print out a few individual lines
 
         ```ruby
-        >>> chapters = open('./exercises/llc-chapters.csv')
-        >>> print(chapters.readline())
+        irb(main):001:0> chapters = File.open('./exercises/llc-chapters.csv')
+        irb(main):001:0> puts chapters.readline()
         City,Province,Chapter Lead(s)
 
-        >>> print(chapters.readline())
+        irb(main):001:0> puts chapters.readline()
         Vancouver,BC,Meghan
 
-        >>> print(chapters.readline())
+        irb(main):001:0> puts chapters.readline()
         Calgary,AB,Darcie
 
-        >>> chapters.close()
+        irb(main):001:0> chapters.close()
         ```
       </script>
     </section>
@@ -968,11 +967,11 @@
         If we want to print each of the rows in our file, we can use the following code:
 
         ```ruby
-        >>> chapters = open('./exercises/llc-chapters.csv')
-        >>> for line in chapters:
-        ...     print(line)
-        ...
-        >>> chapters.close()
+        irb(main):001:0> chapters = File.open('./exercises/llc-chapters.csv')
+        irb(main):002:0> for line in chapters
+        irb(main):003:1> puts line
+        irb(main):004:1> end
+        irb(main):001:0> chapters.close()
         ```
 
         More info:<!-- .element: class="footnote" --> https://docs.ruby.org/2/tutorial/controlflow.html#for-statements
@@ -1034,7 +1033,7 @@
         In your console, import the `csv` library as follows.
 
         ```ruby
-        >>> import csv
+        irb(main):001:0> import csv
         ```
 
         If you then type `csv.` and wait, it will show you a list of everything in that module.
@@ -1061,17 +1060,17 @@
         * Then we pass the file into `DictReader` to make sense of it
 
           ```
-          >>> import csv
-          >>> chapters_file = open('./exercises/llc-chapters.csv')
-          >>> chapters_data = csv.DictReader(chapters_file)
+          irb(main):001:0> import csv
+          irb(main):001:0> chapters_file = open('./exercises/llc-chapters.csv')
+          irb(main):001:0> chapters_data = csv.DictReader(chapters_file)
           ```
         * Now, we can pull out one row at a time
 
           ```
-          >>> chapter = chapters_data.next()
-          >>> print(chapter)
+          irb(main):001:0> chapter = chapters_data.next()
+          irb(main):001:0> print(chapter)
           {'City': 'Vancouver', 'Chapter Lead(s)': 'Meghan', 'Province': 'BC'}
-          >>> type(chapter)
+          irb(main):001:0> type(chapter)
           <type 'dict'>
           ```
       </script>
@@ -1086,12 +1085,12 @@
         Instead of having to remember which *column* represents city, we can access it with a keyword:
 
         ```ruby
-        >>> chapter = {'City': 'Vancouver', 'Chapter Lead(s)': 'Meghan', 'Province': 'BC'}
-        >>> print(chapter['City'])
+        irb(main):001:0> chapter = {'City': 'Vancouver', 'Chapter Lead(s)': 'Meghan', 'Province': 'BC'}
+        irb(main):001:0> print(chapter['City'])
         Vancouver
-        >>> print(chapter['Province'])
+        irb(main):001:0> print(chapter['Province'])
         BC
-        >>> print(chapter['Chapter Lead(s)'])
+        irb(main):001:0> print(chapter['Chapter Lead(s)'])
         Meghan
         ```
       </script>
@@ -1108,10 +1107,10 @@
         * All the instructions in the indented block, are run for each `chapter`
 
         ```ruby
-        >>> import csv
-        >>> chapters_file = open('./exercises/llc-chapters.csv')
-        >>> chapters = csv.DictReader(chapters_file)
-        >>> for chapter in chapters:
+        irb(main):001:0> import csv
+        irb(main):001:0> chapters_file = open('./exercises/llc-chapters.csv')
+        irb(main):001:0> chapters = csv.DictReader(chapters_file)
+        irb(main):001:0> for chapter in chapters:
         ...     print(chapter['City'] + ', ' + chapter['Province'])
         ...     print('    ' + chapter['Chapter Lead(s)'])
         ...
@@ -1159,9 +1158,9 @@
         We can add `1` to the current value of a variable, and assign it back to the same variable. ruby processes everything to the right of the `=` before assignining the result.
 
         ```ruby
-        >>> count = 0
-        >>> count = count + 1
-        >>> print(count)
+        irb(main):001:0> count = 0
+        irb(main):001:0> count = count + 1
+        irb(main):001:0> print(count)
         1
         ```
         We can count the number of chapters in **llc-chapters.csv** if we increase by one each time it loops.
@@ -1195,12 +1194,12 @@
         ruby has a `.find()` function available on `str` types that tells you where another string appears – its **index**.
 
         ```ruby
-        >>> "Ladies Learning Code".find("Code")
+        irb(main):001:0> "Ladies Learning Code".find("Code")
         16
-        >>> title = "National Learn to Code Day"
-        >>> title.find("Code")
+        irb(main):001:0> title = "National Learn to Code Day"
+        irb(main):001:0> title.find("Code")
         18
-        >>> title.find("code")
+        irb(main):001:0> title.find("code")
         -1
         ```
 
@@ -1220,8 +1219,8 @@
         Remember, `.find()` returns the index of the search string in the other string **or** `-1` to signal nothing was found. We can use the `>=` operator to determine if the string was found as shown below:
 
         ```ruby
-        >>> leads = "Nancy & Cassie"
-        >>> if leads.find("&") >= 0:
+        irb(main):001:0> leads = "Nancy & Cassie"
+        irb(main):001:0> if leads.find("&") >= 0:
         ...     print(leads + " are co-leads")
         ...
         Nancy & Cassie are co-leads
