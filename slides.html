@@ -171,11 +171,12 @@
       ## Development Environment
 
       You will need:
-
-      1. **Ruby 2.2.x installed** ( [Mac](https://www.ruby-lang.org/en/downloads/, [Windows](http://rubyinstaller.org/) )
-        -Ruby comes by default on Mac OSX
-      1. **[Atom](https://atom.io/)**
-      1. Learner files from LLC (containing the exercise and reference files).
+<!--- TEMP: this needs formatting TLC -->
+      1. Ruby 2.2.x installed
+      2.[Mac](https://www.ruby-lang.org/en/downloads/, [Windows](http://rubyinstaller.org/)
+        -Ruby comes by default on Mac OSX and the above link is for different versions!
+      3. **[Atom](https://atom.io/)**
+      4. Learner files from LLC (containing the exercise and reference files).
     </section>
 <!-- Start of Section about PyCharm that needs to be redone -->
     <section class="slide centered" data-markdown>
@@ -206,17 +207,16 @@
 
     <section class="slide" data-markdown>
       <script type="text/template">
-        ## Running ruby in PyCharm
+        ## Running ruby in the Terminal
 
-        The console is an interactive tool used to test and debug code and it&rsquo;s included in PyCharm!
+        The Terminal (A.K.A. Console) is an interactive tool used to test and debug code.
 
         Let&rsquo;s open the console:
-
+        <ul>
+        <li>On Windows: Open the console that came with <a href="http://rubyinstaller.org/">Ruby Installer</a></li> (should be installed from earlier.)
+        <li>On Mac: Open Applications > Utilities > <b>Terminal</b></li>
+      </ul>
         ![Tools &gt; ruby Console&hellip;](./framework/img/workshop/run-ruby.png)
-
-        The console will pop up at the bottom of the application. ruby is now ready to do your bidding...
-
-        ![ruby Console in PyCharm](./framework/img/workshop/open-console2.png)
 
         Now you can type code after the green `irb(main):001:0>` symbol. It is used by the console to represent a space for you to enter your input but you don&rsquo;t have to actually type it.  You can also open and close the console by selecting the icon in the lower right of PyCharm.
       </script>
@@ -248,7 +248,7 @@
         irb(main):001:0> 1 / 2
         0
         ```
-        Why is `1 / 2 = 0`? We&rsquo;ll come back to that.
+        Why is `1 / 2 = 0`?
 
       </script>
     </section>
@@ -341,13 +341,13 @@
         ## Concatenation
          You can "add" strings together, and that&rsquo;s called **concatenation**. It  joins multiple strings into one.
         ```
-        irb(main):001:0> print("Hello " + "World!")
+        irb(main):001:0> print "Hello " + "World!"
         Hello World!
         ```
         But what if we try to join a string and a number?
 
         ```ruby
-        irb(main):001:0> print(2 + "2")
+        irb(main):001:0> print 2 + "2"
         TypeError: String can'/'t be coerced into Fixnum
 
         ```
@@ -366,11 +366,11 @@
 
 
         ```ruby
-        irb(main):001:0> print(2 + "2")
+        irb(main):001:0> print 2 + "2"
         TypeError: String can&rsquo;t be coerced into Fixnum
         ```
 
-        * The first `2`, inside of `print(2 + "2")` is an integer.
+        * The first `2`, inside of `puts 2 + "2"` is an integer.
         * `"2"` enclosed in the quotes, is a **string** type, or "literal text".
         * ruby can&rsquo;t figure out how to add a number and string, so it spits out an error.
 
@@ -391,14 +391,14 @@
         We can tell ruby how to convert that `"2"` into a number and **change the type**. In this case, change the string to an integer (whole number) using the `int()` function.  Try it in your console.
 
         ```
-        irb(main):001:0> print(2 + "2".to_i)
+        irb(main):001:0> print 2 + "2".to_i
         4
         ```
 
         Now try dividing 2 numbers
 
         ```
-        irb(main):001:0> print(1 / 2)
+        irb(main):001:0> print 1 / 2
         0
         ```
         This happens because Ruby sees 2 integers and will return an integer.
@@ -406,7 +406,7 @@
 
         Integer **classes** don&rsquo;t have decimal parts, so we have to convert to a more precise class, in this case **floats** since this number **class** can handle decimals.
         ```
-        irb(main):001:0> print(1.to_f / 2.to_f)
+        irb(main):001:0> print 1.to_f / 2.to_f
         0.5
         ```
 
@@ -422,14 +422,14 @@
         ruby can also be used to convert numbers to strings.
 
         ```
-        irb(main):001:0> print(99 + " bottles of beer on the wall")
+        irb(main):001:0> print 99 + " bottles of beer on the wall"
         TypeError: String cant be coerced into Fixnum
 
         ```
         Use the `.to_s` function to convert a number to a string.
 
         ```
-        irb(main):001:0> print(99.to_s + " bottles of beer on the wall")
+        irb(main):001:0> print 99.to_s + " bottles of beer on the wall"
 
         ```
 
@@ -459,7 +459,7 @@
 
         ```ruby
         irb(main):001:0> today = "Saturday"
-        irb(main):001:0> print("Today is " + today)
+        irb(main):001:0> print "Today is " + today
         Today is Saturday
         ```
         You can store almost anything in a variable.
@@ -578,7 +578,7 @@
           name = gets.chomp
 
           # … then continues to this line
-          print("Hello " + name)
+          print "Hello " + name
           ```
 
         Now how do we use the `Terminal` to run this file?
@@ -688,11 +688,11 @@
         weather = gets.chomp
 
         if weather == "cold"
-            print("Wear a sweater!")
+            print "Wear a sweater!"
         elsif weather == "raining"
-            print("Bring an umbrella")
+            print "Bring an umbrella"
         else
-            print("Dress normally :)")
+            print "Dress normally :)"
         end
         ```
 
@@ -703,37 +703,6 @@
       </script>
     </section>
 
-<!-- Ruby doesn't use indentation like Python - Trudy -->
-<!--     <section class="slide" data-markdown>
-      <script type="text/template">
-        ## Indentation
-
-        ruby uses indentation to figure out which 'block' of code belongs inside the `if` or `else`.
-
-        When you're typing out examples that use an `if` or `else` in the console, you'll see this:
-
-        ```ruby
-        irb(main):001:0> if weather == "cold":
-        ... ̺̺̺̺
-        ```
-
-        The `...` and auto-indentation is the console signalling that it expects the nested block code.
-        When you're done, press enter twice (or backspace and type `else:` and you'll get your next indented block).
-
-        ```ruby
-        irb(main):001:0> if weather == "cold":
-        ...     print("Wear a sweater!")
-        ... else:
-        ... print("Dress normally :)")
-        File "<input>", line 5
-            print("Dress normally :)")
-                ^
-        IndentationError: expected an indented block
-        ```
-      </script>
-    </section> -->
-
-<!-- So I created a slide on String Interpolation - Trudy -->
     <section class="slide" data-markdown>
       <script type="text/template">
         ## String Interpolation
@@ -779,11 +748,12 @@
 
         ```ruby
         irb(main):001:0> x = 5
-        irb(main):001:0> print(x > 5)
+        irb(main):001:0> print x > 5
         False => nil
-        irb(main):001:0> print(x >= 5)
+        irb(main):001:0> print x >= 5
         True => nil
 
+<!-- TEMP: This could be hard for learners to understand, we should explain #{}-->
         irb(main):001:0> if x >= 5
         ...     print " #{x} is greater than or equal to 5"
         ... else
@@ -844,7 +814,7 @@
 
         ```ruby
         irb(main):001:0> if x > 10 and x < 0
-        ...     print("x could never be greater than 10 AND less than 0")
+        ...     print "x could never be greater than 10 AND less than 0"
         ...   end
         # Nothing prints here
         ```
@@ -896,11 +866,13 @@
 
         It&rsquo;s fairly easy in ruby to open a text file and print the contents to the screen.
 
+        We have a couple files from <a href=http://open.canada.ca>open.canada.ca</a> in the excercises folder. Let's try opening them!
+
         ```ruby
-        irb(main):001:0> chapters = File.open(".../llc-intro-to-ruby/exercises/llc-chapters.csv")
-        irb(main):001:0> puts chapters.read()
+        irb(main):001:0> emissions = File.open(".../llc-intro-to-ruby/exercises/no-emissions.csv")
+        irb(main):001:0> puts emissions.read()
         # … lots of file data …
-        irb(main):001:0> chapters.close()
+        irb(main):001:0> emissions.close()
         # When you're done with a file it's a good idea to close it
         ```
       </script>
@@ -912,22 +884,25 @@
 
         In order to make use of the data in a file, we need to make sense of small portions at a time.
 
-        In the `llc-chapters.csv` file, each line of the file represents a Ladies Learning Code Chapter
+        In the `no-emissions.csv` file, each line of the file represents a country and the amount of nitrogen oxide emissions during a period of time.
 
         Let&rsquo;s print out a few individual lines
 
         ```ruby
-        irb(main):001:0> chapters = File.open('./exercises/llc-chapters.csv')
-        irb(main):001:0> puts chapters.readline()
-        City,Province,Chapter Lead(s)
+        irb(main):001:0> emissions = File.open('./exercises/no-emissions.csv')
+        irb(main):001:0> puts emissions.readline()
+        => "\"Nitrogen oxide emissions by country, 2002 and 2012\",,,,\r\n"
 
-        irb(main):001:0> puts chapters.readline()
-        Vancouver,BC,Meghan
+        irb(main):001:0> puts emissions.readline()
+        => ",,,,\r\n"
 
-        irb(main):001:0> puts chapters.readline()
-        Calgary,AB,Darcie
+        irb(main):001:0> puts emissions.readline()
+        => "Country,2002 Nitrogen oxide emissions (kilotonnes),2012 Nitrogen oxide emissions... etc."
 
-        irb(main):001:0> chapters.close()
+        irb(main):001:0> puts emissions.readline()
+        => "United States,21632,12258,1.8,0.9\r\n"
+
+        irb(main):001:0> emissions.close()
         ```
       </script>
     </section>
@@ -936,21 +911,19 @@
       <script type="text/template">
         ## Comma-Separated Values (CSV) Files
 
-        In the previous slide we printed out three lines in the file, one at a time.
+        In the previous slide we printed out four lines in the file, one at a time.
+        The first line is the title of the file, the second a space, the third is a legend, and the fourth is the first entry.
 
         ```
-        City,Province,Chapter Lead(s)
-        Vancouver,BC,Meghan
-        Calgary,AB,Darcie
+        "\"Nitrogen oxide emissions by country, 2002 and 2012\",,,,\r\n"
+        ",,,,\r\n"
+        "Country,2002 Nitrogen oxide emissions (kilotonnes),2012 Nitrogen oxide emissions... etc."
+        "United States,21632,12258,1.8,0.9\r\n"
         ```
 
-        Notice that all three lines have exactly three values, separated by a comma (`,`)
+        Notice that all three lines have columns, separated by a comma (`,`)
 
-        The first line doesn&rsquo;t tell us about a chapter, it has headings than describe the data in the next lines
-
-        The second and third line each represent one of the LLC chapters.
-
-        This is a specific *file format* called **CSV** (short for *comma-separated values*) that is used to represent spreadsheet-like data
+        Dividing columns by commas is called Comma Seperated Values, or **CSV** that is used to represent spreadsheet-like data
 
         This is a widely used file-format because it&rsquo;s such a simple representation of rows and columns of data. It doesn&rsquo;t matter whether you&rsquo;re on a Mac, Windows, Linux or even on a web app like Google Docs – everyone can use this data.
         </script>
@@ -962,35 +935,36 @@
 
         It&rsquo;s all well and good to print out the lines in a file one-at-a-time while you&rsquo;re learning, but surely, there&rsquo;s a better way to read *all* the lines in a file.
 
-        In programming, when you want to perform the same action many times in a row, we use **loops**. In ruby, the main kind of loop is the `for` loop.
+        In programming, when you want to perform the same action many times in a row, we use **loops**. In ruby, there are lots of types!
+        But here we will use a `for` loop.
 
         If we want to print each of the rows in our file, we can use the following code:
 
         ```ruby
-        irb(main):001:0> chapters = File.open('./exercises/llc-chapters.csv')
-        irb(main):002:0> for line in chapters
+        irb(main):001:0> emissions = File.open('./exercises/no-emissions.csv')
+        irb(main):002:0> for line in emissions
         irb(main):003:1> puts line
         irb(main):004:1> end
-        irb(main):001:0> chapters.close()
+        irb(main):001:0> emissions.close()
         ```
 
         More info:<!-- .element: class="footnote" --> https://docs.ruby.org/2/tutorial/controlflow.html#for-statements
 
       </script>
     </section>
-
+<!-- This doesn't exist in ruby
     <section class="slide" data-markdown>
       <script type="text/template">
         ## `for` loop behind the scenes
 
-        If you play around with the `chapters` variable in your console, you might notice that it has a `.next()` function which does the same thing as `.readline()`
+        If you play around with the `emissions` variable in your console, you might notice that it has a `.next()` function which does the same thing as `.readline()`
 
         `for` can work with many different collections of data, all it&rsquo;s looking for is that `.next()` function.
 
         Behind the scenes, it&rsquo;s doing something roughly like
 
         ```ruby
-        line = chapters.next()
+        line = emissions.next()
         # Execute your code block
         # …
         # Go back to get the next value and repeat until there are no more values
@@ -999,6 +973,7 @@
         We&rsquo;ll use the `for` loop in our future exercises to work with a larger file.
       </script>
     </section>
+-->
 
     <section class="slide title" data-markdown>
       <script type="text/template">
@@ -1016,7 +991,7 @@
 
         ruby has wonderful built in **libraries** which are collections of code that other people have written. Today we&rsquo;ll use the **csv** library. It contains instructions that tell ruby how to work with CSV files.
 
-        This library will help us makes sense of the data contained in a CSV file to learn more about LLC activities in 2014.
+        This library will help us makes sense of the data contained in a CSV file to learn more from Canada's Open Data.
 
         More info:<!-- .element: class="footnote" --> https://docs.ruby.org/2/library/csv.html
       </script>
@@ -1028,18 +1003,16 @@
 
         So far, we've been writing all our code in the console or in one file. When you use a library, you don't want to copy all that code into your file, otherwise it would become huge!
 
-        In ruby, you can **import** the functions and other structures from a **module** so you can use the code without having it in your file. Then you can use functions (and other structures) from that **module** to do your bidding!
+        In ruby, you can **require** the functions and other structures so you can use the code without having it in your file. Then you can use functions (and other structures) to do your bidding!
 
         In your console, import the `csv` library as follows.
 
         ```ruby
-        irb(main):001:0> import csv
+        irb(main):001:0> require 'csv'
         ```
-
+<!-- TEMP: I don't think you can do this in IRB
         If you then type `csv.` and wait, it will show you a list of everything in that module.
-
-        ![Console with functions available in the csv module](framework/img/workshop/import-list.png)
-
+-->
         More info:<!-- .element: class="footnote" --> https://docs.ruby.org/2/tutorial/modules.html
       </script>
     </section>
@@ -1053,29 +1026,24 @@
 
         The CSV libary has a number of different tools for extracting actual data from a CSV file. Instead of a line of comma-separated values, we can access individual values easily (like the cells of a spreadsheet).
 
-        Today we&rsquo;ll mostly use the `DictReader` tool because it's easier to understand the data in each row (without remembering anything about the headings)
+        We can use for loops on CSV files!
 
         * First we open the file
-        * Then, we import the `csv` library
-        * Then we pass the file into `DictReader` to make sense of it
+        * Then, we require the `csv` library
+        * Then read it!
+
+        <a href="http://ruby-doc.org/stdlib-1.9.2/libdoc/csv/rdoc/CSV.html#method-c-readlines">Ruby Docs</a> have a list of all functions available in CSV.
 
           ```
-          irb(main):001:0> import csv
-          irb(main):001:0> chapters_file = open('./exercises/llc-chapters.csv')
-          irb(main):001:0> chapters_data = csv.DictReader(chapters_file)
+          irb(main):001:0> require 'csv'
+          irb(main):001:0> emissions_file = CSV.open('./exercises/no-emissions.csv')
+          irb(main):014:0> emissions_file.read
           ```
-        * Now, we can pull out one row at a time
-
-          ```
-          irb(main):001:0> chapter = chapters_data.next()
-          irb(main):001:0> print(chapter)
-          {'City': 'Vancouver', 'Chapter Lead(s)': 'Meghan', 'Province': 'BC'}
-          irb(main):001:0> type(chapter)
+          ** Notice how the data is parsed acording to the commas? This means we can read the data by column or by row!
           <type 'dict'>
-          ```
       </script>
     </section>
-
+<!-- TEMP: There are no dictionaries in Ruby I think we should cut this and allocate the time elsewhere
     <section class="slide" data-markdown>
       <script type="text/template">
         ## Dictionaries
@@ -1095,55 +1063,51 @@
         ```
       </script>
     </section>
-
+-->
     <section class="slide" data-markdown>
       <script type="text/template">
         ## Working in a `for` loop
 
         Before lunch, we learned how the `for` loops can repeat the same set of intructions on a collection of things - like our CSV rows.
 
-        * The `for` loop assigns *each row* in turn to the `chapter` variable
+        * The `for` loop assigns *each row* in turn to the `emissions` variable
         * We group instructions together with the same indentation
         * All the instructions in the indented block, are run for each `chapter`
 
         ```ruby
-        irb(main):001:0> import csv
-        irb(main):001:0> chapters_file = open('./exercises/llc-chapters.csv')
-        irb(main):001:0> chapters = csv.DictReader(chapters_file)
-        irb(main):001:0> for chapter in chapters:
-        ...     print(chapter['City'] + ', ' + chapter['Province'])
-        ...     print('    ' + chapter['Chapter Lead(s)'])
+        irb(main):001:0> require 'csv'
+        irb(main):041:0> CSV.foreach('./exercises/no-emissions.csv') do |row|
+        irb(main):042:1* puts row[0].to_s + " emitted " + row[1].to_s + " kilotonnes of nitrogen oxide in 2002."
+        irb(main):043:1> end
         ...
-        Vancouver, BC
-            Meghan
-        Calgary, AB
-            Darcie
-        # ... Continues for the other chapters
+        United States emitted 21632 kilotonnes of nitrogen oxide in 2002.
+        Canada emitted 2529 kilotonnes of nitrogen oxide in 2002.
+        Australia emitted 1586 kilotonnes of nitrogen oxide in 2002.
+        Japan emitted 2151 kilotonnes of nitrogen oxide in 2002.
+        # ... Continues for the other countries
         ```
       </script>
     </section>
 
     <section class="slide" data-markdown>
       <script type="text/template">
-        ## Exercise 4: Find your chapter lead (15 mins)
+        ## Exercise 4: Find the difference between a country's 2002 emissions and their 2012 emissions (15 mins)
 
-        You already have the tools you need to find your chapter lead(s) in the `llc-chapters.csv`.
+        You already have the tools you need to find your chapter lead(s) in the `no-emissions.csv`.
 
-        You'll find the file **ex4_chapter_lead_finder.py** in the **exercises** folder filled with comments. Apply what we've learned so far, as suggested by the comments.
+        You'll find the file **ex4_emissions_comparison.rb** in the **exercises** folder filled with comments. Apply what we've learned so far, as suggested by the comments.
 
         ```ruby
-        # Import the csv library
-        import csv
+        # Require the csv library
 
-        # Open the 'llc-chapters.csv' file
-
-        # Convert it to a csv_data structure
+        # Open the 'no-emissions.csv' with a foreach loop
 
         # Loop through each of the rows
 
-            # Compare the 'City' in the row with your city
+            # Compare the integer in the second (row[1]) with the integer in the third row (row[2])
 
-                # Print "Thank you [[Chapter Lead(s)]]!"
+                # Print "The difference in emissions between 2002 and 2012 for [COUNTRY] is [NUMBER] kilotonnes!"
+
         ```
       </script>
     </section>
