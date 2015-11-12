@@ -1,12 +1,10 @@
 
-puts "What is the weather? (cold, raining, etc.): "
-# chomp removed the enter at the end of a line "chomps" off the /n or ENTER key input
-weather = gets.chomp
+# Ask the user for input on the weather!
 
-if (weather == "cold")
-    print "Wear a sweater!"
-elsif (weather == "raining")
-    print "Bring an umbrella"
-else
-    print "Dress normally :)"
-end
+# Use chomp to get the user input
+
+# If the weather is "cold"...
+
+# If the weather is "raining"...
+
+# If it is neither...

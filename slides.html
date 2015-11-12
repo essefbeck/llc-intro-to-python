@@ -422,14 +422,14 @@
         ruby can also be used to convert numbers to strings.
 
         ```
-        irb(main):001:0> print 99 + " bottles of beer on the wall"
+        irb(main):001:0> print 3 + " items in my bento!"
         TypeError: String cant be coerced into Fixnum
 
         ```
         Use the `.to_s` function to convert a number to a string.
 
         ```
-        irb(main):001:0> print 99.to_s + " bottles of beer on the wall"
+        irb(main):001:0> print 3.to_s + " items in my bento!"
 
         ```
 
@@ -482,7 +482,7 @@
 
         Why?
         You changed <!-- .element: class="delayed" -->`y`, but the old value of `x` is still in memory.
-        ruby will remember variable names until you close PyCharm or [clear them manually](https://docs.ruby.org/2/tutorial/datastructures.html#the-del-statement).
+        ruby will remember variable names until you close IRB.
       </script>
     </section>
 
@@ -977,6 +977,7 @@
 
     <section class="slide title" data-markdown>
       <script type="text/template">
+        #![Bey and Nick hamburger](http://data.whicdn.com/images/179079768/large.gif)
         # Lunch!
       </script>
     </section>
@@ -1124,26 +1125,27 @@
         ```ruby
         irb(main):001:0> count = 0
         irb(main):001:0> count = count + 1
-        irb(main):001:0> print(count)
+        irb(main):001:0> print count
         1
         ```
-        We can count the number of chapters in **llc-chapters.csv** if we increase by one each time it loops.
+        We can count the number of countries in **no-emissions.csv** if we increase by one each time it loops.
 
         ```ruby
-        # file: exercises/demo_loop_count.py
-        import csv
-
-        csv_file = open('llc-chapters.csv')
-        csv_data = csv.DictReader(csv_file)
+        # file: exercises/demo_loop_count.rb
+        require 'csv'
 
         count = 0
-        for row in csv_data:
-            count += 1
 
-        print("There are " + str(count) + " chapters")
+        CSV.foreach("no-emissions.csv") do |row|
+          count += 1
+        end
+
+        count -= 3
+
+        puts "There are " + count.to_s + " countries in the survey."
+
         ```
 
-        There are 16 chapters <!-- .element: class="delayed" -->
       </script>
     </section>
 
@@ -1158,42 +1160,30 @@
         ruby has a `.find()` function available on `str` types that tells you where another string appears – its **index**.
 
         ```ruby
-        irb(main):001:0> "Ladies Learning Code".find("Code")
-        16
-        irb(main):001:0> title = "National Learn to Code Day"
-        irb(main):001:0> title.find("Code")
-        18
-        irb(main):001:0> title.find("code")
-        -1
+        irb(main):001:0> "Ladies Learning Code".include?("Code")
+        => true
         ```
 
-        The `.find()` function is case-sensitive – it will only match the *exact* string you pass it, even if the only difference is `C` vs `c`.
+        The `.inlcude?()` function is case-sensitive – it will only match the *exact* string you pass it, even if the only difference is `C` vs `c`.
         *<!-- .element: class="footnote" --> When we said computers require **exact** instructions, we meant it!*
       </script>
     </section>
 
     <section class="slide" data-markdown>
       <script type="text/template">
-        ## Exercise 5: Find chapters with co-leads (15 mins)
+        ## Exercise 5: Comparing Rent in Canadian Cities (15 mins)
+        Now that you know how to find a string within a string, we are going to look at some more data!
+        We are going to switch to using the file rent-data.csv, which is the file we will use in our final project!
 
-        Now that you know how to find a string within a string, we can figure out which cities have co-leads.
+<!-- TEMP: This might need a more thorough explanation of the data -->
+        If you open the **rent-data.csv** file you can see that both provinces and cities are listed for the historical rent data.
 
-        If you open the **llc-chapters.csv** file you can see that we *always* use the `&` character to separate co-lead names.
+        Remember, `.include?()` returns 'true' if the search string is in the row and 'false' if it is not.
 
-        Remember, `.find()` returns the index of the search string in the other string **or** `-1` to signal nothing was found. We can use the `>=` operator to determine if the string was found as shown below:
+        Create a new file **ex5_city_rent_comparison.rb** and use what you've learned to find the rent prices in neighboring cities.
 
-        ```ruby
-        irb(main):001:0> leads = "Nancy & Cassie"
-        irb(main):001:0> if leads.find("&") >= 0:
-        ...     print(leads + " are co-leads")
-        ...
-        Nancy & Cassie are co-leads
-        ```
-
-        Create a new file **ex5_coleaders.py** and use what you've learned to find co-leaders.
-
-        * Print a list of cities with co-leads
-        * Count how many chapters have co-leads
+        * Print a list of cities in your chosen provinces
+        * Print the city with the most expensive rent
       </script>
     </section>
 
@@ -1209,11 +1199,11 @@
 
         So far, we've kept the examples small so you can look at the CSV file yourself and see the patterns.
 
-        In 2014, Ladies Learning Code had nearly 6500 participants and volunteers involved in events (not accounting for people who attended multiple events).
+        However the file **rent-data.csv** has 50,000+ entries!!
 
           Do you want to count those?
 
-          ![Nope, not doing that.](http://33.media.tumblr.com/11c6f192a380836be3282b4777addc32/tumblr_mumzzcS9Ug1s410g9o1_500.gif)
+          ![Nope, not doing that.](https://secure.static.tumblr.com/77ca0023625f97466d6949685a7a9a9a/ekdqlmj/jynndac2p/tumblr_static_tumblr_static_am0no65tjps84o0cs4wc4g8o4_640.gif)
 
         Computers will churn through repetitive tasks according to your instructions without stopping for coffee.
 
@@ -1233,26 +1223,10 @@
         * Find the average of "One bedroom units" in a province of your choice.
         * Find the difference in pricing for "One bedroom units" in the 1980s versus the 1990s in that area.
 
-      </script>
-    </section>
+        * Advanced:
+        Use **selection sort** on your list!
 
-    <section class="slide" data-markdown>
-      <script type="text/template">
-        ## Things we didn't cover
-
-        ### Writing results to a CSV file
-
-        * Just like `DictReader` there's a `DictWriter` in the csv package
-        * Gather data then write out the headers and data to a file
-        * Useful for filtering a big set of data down to something you can analyse in a spreadsheet program
-        * See `reference/bonus_writing_csv.py`
-
-        ### Reading files in other languages (like French)
-
-        * ruby 2.x defaults to ASCII (very basic letters and numbers)
-        * Most text on the internet with accents or foreign characters (Arabic, Chinese, etc.) are represented in [unicode](http://www.w3.org/International/questions/qa-what-is-encoding.en)
-        * You can install the [unicodecsv](https://pypi.ruby.org/pypi/unicodecsv/0.13.0) package with [pip](http://www.dabapps.com/blog/introduction-to-pip-and-virtualenv-ruby/) and it will read and write CSV files containing accents and other characters
-
+        ![Nicki - Work it](http://33.media.tumblr.com/50d6e9b731ca0e739a04ed9255df3228/tumblr_mmjqcuNB9b1ql5yr7o1_500.gif)
       </script>
     </section>
 
@@ -1262,26 +1236,24 @@
 
         ### Tutorials/Courses:
 
-        * [The (Official) ruby Tutorial](http://docs.ruby.org/2.7/tutorial/)
-        * [Full Stack ruby](http://www.fullstackruby.com)
-        * [Udacity - Learn Object Oriented ruby](http://www.udacity.com/course/programming-foundations-with-ruby--ud036)
+        * [The (Official) Ruby-Lang Tutorial](https://www.ruby-lang.org/en/documentation/)
+        * [Ruby Docs](http://ruby-doc.org/)
 
         ### Web Development with ruby:
 
-        * [Django](https://www.djangoproject.com/)
+        * [Ruby on Rails](http://rubyonrails.org/)
         * [Hello Web App](https://www.hellowebapp.com/)
 
         ### Other:
 
-        * [Raspberry pi](https://www.raspberrypi.org/)
-        * [mySQL connector](http://dev.mysql.com/doc/connector-ruby/en/)
+        * [Ruby Gems](https://rubygems.org/)
       </script>
     </section>
 
     <section class="slide centered" data-markdown>
       <script type="text/template">
       </br></br> </br>
-        ![Good luck](http://38.media.tumblr.com/ef58a0f8420d96d9e12c73bff83de50a/tumblr_mh0d0koXHX1s410g9o1_500.gif) <!-- .element: style="width: 50%" -->
+        ![A-Ok](http://ak-hdl.buzzfed.com/static/2015-08/24/10/imagebuzz/webdr11/anigif_optimized-23047-1440425651-7.gif) <!-- .element: style="width: 50%" -->
       </script>
     </section>
 

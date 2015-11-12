@@ -16,12 +16,30 @@ require 'csv'
 CSV.open("Output.csv", "wb") do |csv|
 
   # Read in the CSV
-  CSV.foreach('HistoricalRentData.csv', :encoding => 'ISO-8859-1') do |row|
+  CSV.foreach('exercises/rent-data.csv', :encoding => 'ISO-8859-1') do |row|
     # checks for VALUE field to be above 0 - but I already filtered the non-zero entries out to cut down on size
     if row[7].to_i > 0 and row[0].to_i > 1980 and row[0].to_i < 1990 and row[1].include? "Edmonton"
           # Adding the filtered data to a new file.
           csv << row
           # puts row
     end
+
+    # selection sort
   end
 end
+
+=begin
+# Selection sort (very slow on large lists)
+list = CSV.open()
+size_of_list = a.size - 1
+
+size_of_list.times do |item|
+  index_min = item
+
+  (item + 1).upto(size_of_list) do |j|
+    index_min = j if a[j] < a[index_min]
+  end
+    list[i], list[index_min] = list[index_min], list[i] if index_min != item
+end
+
+=end
