@@ -6,3 +6,30 @@
               url(../img/banner-home2.jpg) no-repeat;
   background-size: cover;
 }
+
+.who-uses {
+  img {
+    max-height: 125px;
+    margin: 25px;
+  }
+}
+
+.slide {
+  &.ruby-background {
+    background: url(../img/workshop/rubybg.jpg) no-repeat;
+    background-size: cover;
+
+    h1 {
+      color: #fff;
+      line-height: 1.25;
+    }
+    .source {
+      position: absolute;
+      background: rgba(255, 255, 255, .3);
+      bottom: 20px;
+      right: 20px;
+      padding: 2px 4px;
+      border-radius: 2px;
+    }
+  }
+}

@@ -453,6 +453,7 @@ e.g.
     background: rgba($llc-pink, 0.8);
     border-radius: 5px;
     padding: 0 10px 0 6px;
+    -webkit-box-decoration-break: clone;
     box-decoration-break: clone;
 
     &.light {
