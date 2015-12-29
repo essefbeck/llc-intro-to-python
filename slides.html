@@ -649,17 +649,49 @@
 
     <section class="slide" data-markdown>
       <script type="text/template">
-        #Class Exercise 1: Hello World [Revise]
+        #Class Exercise 1: Hello World
+
+        We&rsquo;ve  used the console to output a 'Hello World' message on the screen. Let's use it to make it say hello to anyone?
+
+        We use the method `gets` to recieve data typed into the console by a user and **returns** that value.
+
+        In the console you'll see a blank line, type your name here.
+
+        ```ruby
+        irb(main):001:0> gets
+        irb(main):001:0>
+        ```
+          Ruby returns the name plus a `\n` (We'll deal with the `\n` later)
+
+        ```ruby
+        => "Amy\n"
+        ```
+        Generally we set the value returned by `gets` to a **variable**.
+
+        ```ruby
+        # Set variable name to value of gets
+        irb(main):001:0> name = gets
+        irb(main):001:0> "Sarah\n"
+        ```
+
+        Now `name` is set to 'Sarah\n'.
+
+        ```ruby
+        irb(main):001:0> name
+        => "Sarah\n"
+        ```
 
 
-        We&rsquo;ve  used the console to output a 'Hello World' message on the screen. Let's make it say hello to anyone?
+      </script>
+    </section>
 
-        The `gets` method gets data typed by a user and **returns** that value.
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        #Class Exercise 1: Hello World (Continued)
 
-        [The steps are not clear here, is `gets` being used anywhere? Also, is this using the .rb file or console]
+        Notice that Ruby returns the value with a `\n` appended to the input.  This is ruby putting a new line after the input.  We use the method `chomp` to remove the last character of a string.
 
-        Ruby returns the value with a `\n` appended to the input.  This is ruby putting a new line after the input.  We add the method `chomp` to remove this.  `chomp` removes the last character of a string.
-
+        Now let's create a program in the console.
 
         1. You give a `puts` message to let your user know what you&rsquo;re looking for
         1. You write a variable and assign the value of `gets` to it (you add `chomp` to remove the new line character)
@@ -689,7 +721,7 @@
 
         Typing into the console is fine to start, but do you really want to type your program every time you run it?
 
-        ruby can run your code from a file with a `.rb` **extension**
+        Ruby can run your code from a file with a `.rb` **extension**
         *(<!-- .element: class="footnote" -->the letters after `.` in a filename tell your computer which program can run it)*
 
         Let&rsquo;s create our first ruby file!
