@@ -2,7 +2,7 @@
 require 'csv'
 
 # Open the 'no-emissions.csv' with a foreach loop
-CSV.foreach("./exercises/no-emissions.csv") do |row|
+CSV.foreach("./no-emissions.csv") do |row|
 # Loop through each of the rows
   country = row[0].to_s
   emissions2002 = row[1].to_i
