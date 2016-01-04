@@ -22,14 +22,13 @@
 
   <main>
     <section class="slide welcome">
-      <h1><img class="logo-stacked" src="framework/img/llc-logo-stacked-white.png" alt="Ladies Learning Code logo">Welcome!</h1>
+      <h1><img class="logo-stacked" src="framework/img/llc-logo-stacked-white.png" alt="Ladies Learning Code logo">Welcome! [link to be added]</h1>
 
       <div class="instructions no-bullet-list">
         <!-- ADD WIFI INFO HERE -->
         <h2>Get Connected</h2>
         <ul class="connected">
-          <li>Network: wifi network</li>
-          <li>Password: wifi password</li>
+          <li>Network: wifi network / Password: wifi password</li>
         </ul>
         <hr>
 
@@ -39,6 +38,12 @@
             <ul>
               <li>unzip the learner file (<em>extract all</em> if you’re on a PC)</li>
               <li>open <strong>slides.html</strong> in the browser to view the slides</li>
+            </ul>
+          </li>
+          <li>Ruby 2.2.x installed
+            <ul>
+              <li>Windows: <a href="http://rubyinstaller.org/">rubyinstaller.org</a></li>
+              <li>Mac (installed by default): <a href="https://www.ruby-lang.org/en/downloads/">ruby-lang.org</a> (for reference)</li>
             </ul>
           </li>
           <li>Atom Editor: <a href="http://atom.io">http://atom.io</a></li>
@@ -104,23 +109,25 @@
 
       * Libraries
       * Dictionaries
-      * Finding &amp; countings patterns
+      * Finding &amp; counting patterns
       * Final Project
       </script>
     </section>
-
-    <section class="slide" data-markdown>
+    
+    <section class="slide title" data-markdown>
       <script type="text/template">
         #What is programming?
-
-        First there are two things you should know about your computer.
-
+        ##There are two things you should know about your computer
+      </script>
+    </section>
+    
+    <section class="slide" data-markdown>
+      <script type="text/template">
         #1. Your computer speaks a different language.
 
         This is how your computer wishes you could speak to it:
+        
         ![](framework/img/workshop/machine-language.jpg)
-
-
       </script>
     </section>
 
@@ -128,18 +135,22 @@
       <script type="text/template">
         #2. Your computer is not very smart.
 
-        * Computers need *very specific* instructions
-        * Computers need instructions in a form that it can understand
-
+        Computers need:
+        
+        * *very specific* instructions
+        * instructions in a form that it can understand
+        
+        A programming language makes it easier for you to give the computer instructions.
       </script>
     </section>
 
-    <section class="slide" data-markdown>
+    <section class="slide language" data-markdown>
       <script type="text/template">
-        #A programming language makes it easier for you to give the computer instructions.
+        #Programming language
 
-        * It's made up of **simple elements**, that when **combined together**, are used to write a set of **instructions** that the computer then breaks down and interprets as its own language.
-        * Programming languages have syntax, just like human languages do
+        >It's made up of *simple elements*, that when *combined together*, are used to write a set of *instructions* that the computer then breaks down and interprets as its own language.
+        
+        Programming languages have syntax and "grammar rules", just like human languages.
       </script>
     </section>
 
@@ -166,7 +177,8 @@
         * Testing
         * Web Applications (Ruby on Rails)
         * and some of your favorite websites!
-        * ![](framework/img/workshop/logo-twitter.png)
+        
+        ![](framework/img/workshop/logo-twitter.png)
         ![](framework/img/workshop/logo-shopify.png)
         ![](framework/img/workshop/logo-groupon.png)
         ![](framework/img/workshop/logo-airbnb.png)
@@ -179,22 +191,22 @@
       <script type="text/template">
         # Let&rsquo;s get started! <!-- .element: style="font-size:75px;font-weight:normal;" -->
 
-        ![Beyonce - Uh-Huh](http://ell.h-cdn.co/assets/cm/15/01/54a7648407bec_-_bey6.gif) <!-- .element: style="width: 50%" -->
+        ![Beyonce - Uh-Huh](http://ell.h-cdn.co/assets/cm/15/01/54a7648407bec_-_bey6.gif) <!-- .element: style="width: 60%" -->
       </script>
     </section>
 
     <section class="slide" data-markdown>
       <script type="text/template">
-      #Development Environment
+      #Development Environment [link to be added]
 
       You will need:
 
       1. Ruby 2.2.x installed
-      1. **Windows**: http://rubyinstaller.org/
-         **Mac**: https://www.ruby-lang.org/en/downloads/
+        * **Windows**: http://rubyinstaller.org/
+        * **Mac**: https://www.ruby-lang.org/en/downloads/
         * Ruby comes by default on Mac OSX and the above link is for different versions!
-      1. Text editor: **[Atom](https://atom.io/)**
-      1. Learner files from LLC (contains the exercise and reference files - link to be added).
+      1. Text editor - today we'll be using **[Atom](https://atom.io/)**
+      1. Learner files (contains exercise and reference files)
       </script>
     </section>
 
@@ -203,8 +215,8 @@
         #Atom Text Editor
 
         Using a good text editor with integrated and useful features such as syntax highlighting, will help us write code faster with fewer mistakes.
-        </br></br>
-        ![Flawless](http://24.media.tumblr.com/3ef778f016b84d4ea48d58a0c8437d80/tumblr_n0pol8ork51qkomroo1_500.gif) <!-- .element: style="width: 60%" -->
+
+        ![Flawless](http://24.media.tumblr.com/3ef778f016b84d4ea48d58a0c8437d80/tumblr_n0pol8ork51qkomroo1_500.gif) <!-- .element: style="width: 50%" -->
       </script>
     </section>
 
@@ -221,33 +233,43 @@
         ![](framework/img/workshop/add-project-2.jpg)
 
         All of the project files will now appear in your sidebar.  Select the arrows to open the folders within.
-
-        Today, you will be working from the **exercises** folder.  The **reference** folder contains today&rsquo;s project files for reference as an answer key.
-
-        The other folders & files are needed to make this slide presentation work so avoid making edits to them!
       </script>
     </section>
 
     <section class="slide" data-markdown>
       <script type="text/template">
+        #Setting up your project files
+        
+        Today, you will be working from the **exercises** folder.  
+        
+        The **reference** folder contains today&rsquo;s exercise solutions.
+
+        The other folders & files are needed to make this slide presentation work so avoid making edits to them!
+      </script>
+    </section>
+
+    <section class="slide irb" data-markdown>
+      <script type="text/template">
         #Interactive Ruby
 
-        The console is an interactive tool used to test and debug code.
-        Let&rsquo;s open IRB (Interactive Ruby) in the console:
-
-        **Windows**:
-        Open Interactive Ruby from the Ruby section of your Start Menu.
-        **Mac**:
-        Open Applications > Utilities > **Terminal**. Type `irb` and hit enter.
+        The console is an interactive tool used to test and debug code.  
+        Let&rsquo;s open IRB (Interactive Ruby) in the *console*:
+        
+        | Windows  |  Mac |
+        |---|---|
+        | Open Interactive Ruby from the Ruby section of your Start Menu.  | Open **Applications > Utilities > Terminal**. <br>Type `irb` and hit enter. |
 
         Now that it's open and running in the console, you'll see this:
         ```ruby
         irb(main):001:0>
         ```
-        Type your instructions at then end of this line like this:
+        
+        Type your instructions at the end of the line (with the quotes):
+        
         ```ruby
         irb(main):001:0> "Hello!"
         ```
+        The command (instruction) you input will get *evaluated* and a value is returned back to you.
       </script>
     </section>
 
@@ -259,9 +281,10 @@
       <script type="text/template">
         #Ruby can do math
 
-        Let's try out these examples in the console.
+        Let's try some examples in the console.
         Remember to input your commands after this line: `irb(main):001:0>`
-        The command you input will get *evaluated* and a value is returned back to you.
+        
+         Also, numbers don't need quotes like in the previous example. (More on this soon.)
 
         ```
         irb(main):001:0> 2 + 2
@@ -277,7 +300,7 @@
         irb(main):001:0> 1 / 2
         => 0
         ```
-        Why is `1 / 2 = 0`?
+        >Why is `1 / 2 = 0`?
 
       </script>
     </section>
@@ -288,9 +311,9 @@
 
         We just used the *integer* number **class** but there are many more.
 
-        * Integer (whole numbers)
+        * Integer/Fixnum (whole numbers)
         * Float (numbers containing decimals)
-        * String (words, sentences, literal text)
+        * String (words, sentences, literal text) - requires quotes
         * Boolean (`True`, `False`)
         * [and many more!](https://en.wikibooks.org/wiki/Ruby_Programming/Data_types)
 
@@ -312,88 +335,95 @@
       <script type="text/template">
         #Fun with Data Types
 
-        Let's try it in `irb`
+        Let's try some more examples in `irb`.
 
-        * Integer (whole numbers)
-          ```
-          irb(main):001:0> 462 * 86
-          => 39832
-          ```
-        * Float (numbers containing decimals)
-          ```
-          irb(main):001:0> 3.2 / 2
-          => 1.6
-          ```
-        * String (words, sentences, literal text)
-          ```
-          irb(main):001:0> "ladies" + "learning" + "code"
-          => "ladieslearningcode"
-          ```
-        * Boolean (`True`, `False`)
-          ```
-          irb(main):001:0> true
-          => true
-          ```
+        Integer (whole numbers)
+        ```
+        irb(main):001:0> 462 * 86
+        => 39832
+        ```
+        Float (numbers containing decimals)
+        ```
+        irb(main):001:0> 3.2 / 2
+        => 1.6
+        ```
+        String (words, sentences, literal text)
+        ```
+        irb(main):001:0> "ladies" + "learning" + "code"
+        => "ladieslearningcode"
+        ```
+        Boolean (`True`, `False`)
+        ```
+        irb(main):001:0> true
+        => true
+        ```
       </script>
     </section>
 
-    <section class="slide" data-markdown>
+    <section class="slide no-bullet-list" data-markdown>
       <script type="text/template">
         #Functions
 
         * Functions are bundles of instructions that can be re-used
-          * Functions are defined by wrapping the instructions between `def` and `end`
+          * Defined by wrapping the instructions between `def` and `end`
           * Directly after `def` is the name of the function
-        * Function can take **arguments** and can **return** values
-          * After the function name **arguments** are defined in parentheses
-        * Functions always `return` 1 thing or a 1 set of things
+        * Function can take **arguments** and **return** values
+          * After the function name, **arguments** are defined in parentheses, `()`
+        * Functions always `return` 1 thing or a set of things
 
         ```ruby
         def functionName(arg1, arg2)
-            set of instructions
-            return answer
+          set of instructions
+          return answer
         end
         ```
-
-
       </script>
     </section>
+    
     <section class="slide" data-markdown>
       <script type="text/template">
-        #Function Example
-
-        Ex. the `add` function takes `a` and `b` as arguments and will **return** the result
-
-        1.  We define the function first. This doesn't actually run the code.  We're just telling the computer what to expect.
+        #Define the function
+        
+        This doesn't actually run the code.  We're just telling the computer what to expect. 
+        
+        In the below example, the `add` function takes `a` and `b` as arguments and will **return** the result.
+        
         ```ruby
         irb(main):001:0> def add(a, b)
         ...     return a + b
         ...     end
         ...
         ```
-        2.  Then we call the function by typing the name of the function and substituting values where the arguments were defined
+      </script>
+    </section>
+    
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        #Call the function
+        
+        After *defining* the fuction, *call* it by typing the name of the function, `add()` and substituting values where the arguments were defined `(a,b)`.
+        
         ```ruby
         irb(main):001:0> add(1, 2)
         3
         ```
-        3.  The benefit is now we can sub in any 2 numbers without having to rewrite the code
+        
+        The benefit is now we can sub in any 2 numbers without having to rewrite the code
+        
         ```ruby
         irb(main):001:0> add(3, 4)
         7
         ```
-
         We won't create our own functions in today's exercises, but we'll use those provided by ruby and its libraries.
       </script>
     </section>
     <section class="slide" data-markdown>
       <script type="text/template">
-        #Outputting values
+        #Outputting values: `puts`
 
         The `puts` **function** outputs values to the screen.
 
-        Functions at its most basic definition holds a set of instructions. More on functions later.
-
-        Also, note the use of quotes for *string* data types.
+        Reminder, use of quotes for *string* data types.
 
         ```
         irb(main):001:0> puts "Hello World!"
@@ -411,23 +441,33 @@
 
     <section class="slide" data-markdown>
       <script type="text/template">
-        #Printing
+        #Outputting values: `print`
 
-        We can also use the function `print`.
+        The function `print` can also be used to output values.
 
         The difference between `puts` and `print` is `puts` adds a new line to end of the output and `print` does not.
+        
+        ```
+        irb(main):001:0> puts 2 + 2
+        4 
+        => nil
+        ```
+        ```
+        irb(main):001:0> prints 2 + 2
+        4=> nil
+        ```
+        Notice the **nil** remains on the same line as the response?
 
-        Lets try it in IRB!
+        Let's try it in IRB!
         ```
         irb(main):001:0> puts "Hello World!"
         Hello World! => nil
         ```
-
         ```
         irb(main):001:0> puts 2 + 2
         4 => nil
         ```
-        Notice the **nil** remains on the same line as the response
+        
       </script>
     </section>
 
@@ -437,7 +477,7 @@
 
         Remember how **Functions** always return 1 thing?
 
-        Well, `print` and `puts` are fucntions.  However, since they only print to the screen they *technically* don't return anything.
+        Well, `print` and `puts` are functions.  However, since they only print to the screen they *technically* don't return anything.
 
         Since Ruby always needs to return something, it returns `nil`, which is computer for **nothing**.
 
@@ -446,19 +486,14 @@
       </script>
     </section>
 
-
-
     <section class="slide" data-markdown>
       <script type="text/template">
         #Concatenation
 
         Ruby comes with a whole set of predefined functions.  These are sets of code that are so regularly used by most programmers that it makes sense for them to be part of the programming language itself.
 
-        One such function is **concatenation**. With this we can "add" strings together.
-
-        We call this function using the `+`.
-
-        It joins multiple strings into one.
+        One such function is **concatenation**. With this we can "add" strings together. We call this function using the `+` symbol. 
+        
         ```
         irb(main):001:0> print "Ladies " + "Learning " + "Code"
         Ladies Learning Code => nil
@@ -498,7 +533,7 @@
 
     <section class="slide" data-markdown>
       <script type="text/template">
-        #Typecasting
+        #Typecasting: Strings to Numbers
 
         Ruby can convert the string `"2"` into a number and *change the type*.
 
@@ -508,34 +543,40 @@
         irb(main):001:0> print 2 + "2".to_i
         4 => nil
         ```
-        `to_i` is another predefined function in Ruby.  It converts a string to an integer.
-
-        The most common way we call functions is with **dot notation**.  In other words, adding a `.` then the function name after the the object you want to call it on.
-
-        For example:
-
-        ```ruby
-          "5".to_i
-        ```
-
-
+        `to_i` is another predefined function in Ruby.  
+        It converts a string to an integer.
       </script>
     </section>
 
     <section class="slide" data-markdown>
       <script type="text/template">
-        #Typecasting (Continued)
+        #Dot Notation
+        
+        The most common way we call functions is with **dot notation**.
+        
+        In other words, add a period, then the function name *after* the object you want to call it on.
 
-        Now try dividing 2 numbers
+        For example:
+
+        ```ruby
+        "5".to_i
+        ```
+      </script>
+    </section>
+
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        #Numbers
+
+        Now try dividing 2 numbers and see what value gets returned:
 
         ```
         irb(main):001:0> print 1 / 2
         0 => nil
         ```
-        This happens because Ruby sees 2 integers and will return an integer.
-        <br>
-
-        Integer **classes** don&rsquo;t have decimal parts, so we have to convert to a more precise class, in this case **floats** since this number **class** can handle decimals.
+        This happens because Ruby sees 2 integers and will return an integer. Integer **classes** don&rsquo;t have decimal parts, so it must be converted to **floats**, since this number **class** can handle decimals.  
+        
+        Use dot notation and the `.to_f` function.
         ```
         irb(main):001:0> print 1.to_f / 2.to_f
         0.5 => nil
@@ -546,7 +587,7 @@
 
     <section class="slide" data-markdown>
       <script type="text/template">
-        #Typecasting (Continued)
+        #Typecasting: Numbers to Strings
 
         Ruby can also be used to convert numbers to strings.
 
@@ -576,9 +617,12 @@
     <section class="slide" data-markdown>
       <script type="text/template">
         #Variables
-        * In programming, we usually want to store a value to use later
-        * Variables store data in your computer&rsquo;s memory and you use a **variable name** to fetch their value (kind of like a bookmark in a book)
-        * Use the equal (`=`) symbol to assign a value to a variable
+        In programming, we usually want to store a value to use later.  
+        **Variables** store data in your computer&rsquo;s memory.
+        
+        Use a **variable name** to fetch their value (kind of like a bookmark in a book). The equal (`=`) symbol *assigns* a value to a variable.
+        
+        Let's go over these example:
 
         ```ruby
         irb(main):001:0> x = 5
@@ -610,9 +654,9 @@
 
         What do you think the value of `x * y` will be? <span class="delayed">50</span>
 
-        Why?
+        Why?  
         You changed <!-- .element: class="delayed" -->`y`, but the old value of `x` is still in memory.
-        ruby will remember variable names until you close IRB.
+        Ruby will remember variable names until you close IRB.
       </script>
     </section>
 
@@ -621,8 +665,10 @@
         # Variable naming conventions
 
         * can only use letters, numbers and the underscore (`_`); no spaces
-        * words can be separated with the `_`; ex. `ladies_learning_code`
-        * cannot begin with a number; `1day` gives you an error while `day1` is fine
+        * words can be separated with an underscore `_`   
+        i.e. `ladies_learning_code`
+        * cannot begin with a number  
+        i.e. `1day` gives you an error while `day1` is fine
 
         The names we&rsquo;ll use today are descriptive, but otherwise have no special meaning to Ruby.
       </script>
@@ -643,88 +689,110 @@
       </script>
     </section>
 
-<!-- -------------------- -->
-<!-- Exercise 1: Hello World -->
-<!-- -------------------- -->
-
     <section class="slide" data-markdown>
       <script type="text/template">
-        #Class Exercise 1: Hello World
+        #Working with user input
 
-        We&rsquo;ve  used the console to output a 'Hello World' message on the screen. Let's use it to make it say hello to anyone?
+        So far, we&rsquo;ve used the console to output message on the screen. Now let's write a program that can say hello to anyone!
 
-        We use the method `gets` to recieve data typed into the console by a user and **returns** that value.
-
-        In the console you'll see a blank line, type your name here.
+        Use the `gets` method to receive data typed into the console. Then you'll see a blank line and the cursor. Type your name in the blank line.
 
         ```ruby
         irb(main):001:0> gets
-        irb(main):001:0>
+        Sarah
         ```
-          Ruby returns the name plus a `\n` (We'll deal with the `\n` later)
+        Ruby returns the name plus a `\n` (we'll deal with the `\n` later).
 
         ```ruby
-        => "Amy\n"
+        => "Sarah\n"
         ```
-        Generally we set the value returned by `gets` to a **variable**.
+      </script>
+    </section>
+
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        #Working with user input: Variables
+        
+        Generally, we set the value returned by `gets` to a **variable**.
 
         ```ruby
         # Set variable name to value of gets
         irb(main):001:0> name = gets
-        irb(main):001:0> "Sarah\n"
+        ```
+        
+        Then add your name to the blank line.
+        ```ruby
+        # Set variable name to value of gets
+        irb(main):001:0> name = gets
+        # Add the name value
+        Sarah
         ```
 
-        Now `name` is set to 'Sarah\n'.
+        Now, *call* the variable using `name` and it will return the assigned value.
 
         ```ruby
         irb(main):001:0> name
         => "Sarah\n"
         ```
-
-
       </script>
     </section>
 
     <section class="slide" data-markdown>
       <script type="text/template">
-        #Class Exercise 1: Hello World (Continued)
+        #What is `\n`?
 
-        Notice that Ruby returns the value with a `\n` appended to the input.  This is ruby putting a new line after the input.  We use the method `chomp` to remove the last character of a string.
+        `\n` is Ruby's way of putting a *new line* after the input.  
+        Use the method `chomp` to remove the last character of a string.
 
-        Now let's create a program in the console.
+        Let's create a program in the console that will remove the `\n` character.
 
-        1. You give a `puts` message to let your user know what you&rsquo;re looking for
-        1. You write a variable and assign the value of `gets` to it (you add `chomp` to remove the new line character)
-        1. The user types something and hits the **enter** key
-        1. Whatever the user types is **returned** to you.
-
-        Let&rsquo;s try it in your console:
-
+        1.&nbsp;Give a `puts` message to let your user know what you&rsquo;re looking for.
         ```ruby
-        irb(main):001:0> puts "What's your name?"
+        irb(main):001:0> puts "What is your name?"
         ```
-        It outputs `What''s your name?`
-
+        ```ruby
+        #outputs:
+        What is your name?
+        => nil
+        ```
+        
+        2.&nbsp;Define a `name` variable and assign the value of `gets` to it.  
+        Add `chomp` to remove the new line character.
         ```ruby
         irb(main):001:0> name = gets.chomp
         ```
+        
+        3.&nbsp;Type your name in the blank line and hit the **enter** key. The value will be  *returned* to you.
+        
+        ```
+        irb(main):001:0> name = gets.chomp
+        Sarah
+        => "Sarah"
+        ```
 
-        We assign the value of what is gotten to the name variable
-
-        You type in your name, press **enter**, and it will print it out on the next line.
+        4.&nbsp;Type the variable `name` and **enter**. 
+        
+        ```ruby
+        irb(main):001:0> name
+        "Sarah"
+        ```
+        
+        The name *value* is now assigned to the *variable* and will return without the `\n` character!
       </script>
     </section>
-
+    <!-- -------------------- -->
+    <!-- Exercise 1: Hello World -->
+    <!-- -------------------- -->
     <section class="slide" data-markdown>
       <script type="text/template">
-        #Class Exercise 1: Hello World (part 2)
+        #Class Exercise 1: Hello World
 
         Typing into the console is fine to start, but do you really want to type your program every time you run it?
 
-        Ruby can run your code from a file with a `.rb` **extension**
-        *(<!-- .element: class="footnote" -->the letters after `.` in a filename tell your computer which program can run it)*
+        Ruby can run your code from a file with a `.rb` **extension**  
+        *(<!-- .element: class="note" -->the letters after `.` in a filename tell your computer which program can run it)*
 
-        Let&rsquo;s create our first ruby file!
+        Let&rsquo;s create our first Ruby file!
 
         1. Open Atom and choose ***New File*** from the ***File*** menu. Then choose ***Save as...*** from the file menu.
 
@@ -732,7 +800,7 @@
 
         1. Enter the name `hello.rb` in the popup box.
 
-          <!-- ----------[new ruby file name](framework/img/workshop/new-ruby-file.png)---------- -->!
+          ![new ruby file name](framework/img/workshop/new-ruby-file.png)
 
         1. Now we can add our simple program to the file
 

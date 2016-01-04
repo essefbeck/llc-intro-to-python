@@ -7,13 +7,29 @@
   background-size: cover;
 }
 
+.language {
+  blockquote {
+    font-size: 36px;
+    padding: 10px 30px;
+    line-height: 1.8;
+  }
+  em {
+    // font-style: italic;
+    color: $llc-pink;
+  }
+}
 .who-uses {
   img {
     max-height: 125px;
     margin: 25px;
   }
 }
-
+.irb {
+  table th,
+  table td {
+    width: 50%;
+  }
+}
 .slide {
   &.ruby-background {
     background: url(../img/workshop/rubybg.jpg) no-repeat;
