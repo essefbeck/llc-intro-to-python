@@ -206,7 +206,7 @@
         * **Mac**: https://www.ruby-lang.org/en/downloads/
         * Ruby comes by default on Mac OSX and the above link is for different versions!
       1. Text editor - today we'll be using **[Atom](https://atom.io/)**
-      1. Learner files (contains exercise and reference files)
+      1. Learner files (contains exercise and solution files)
       </script>
     </section>
 
@@ -242,7 +242,7 @@
         
         Today, you will be working from the **exercises** folder.  
         
-        The **reference** folder contains today&rsquo;s exercise solutions.
+        The **solutions** folder contains today&rsquo;s exercise answer keys.
 
         The other folders & files are needed to make this slide presentation work so avoid making edits to them!
       </script>
@@ -780,14 +780,43 @@
         The name *value* is now assigned to the *variable* and will return without the `\n` character!
       </script>
     </section>
+    
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        #Working with a Text Editor
+        
+        Typing into the console is fine to start, but do you really want to type your program every time you run it?
+        
+        Let's open our **exercises** folder in Atom to get ready to work in the text editor instead of the console. This will also make it easier to write larger blocks of code.
+        
+        Inside of the folder you downloaded today, there a few other folders.
+
+        ```
+        llc-intro-to-ruby-data-master
+          |-- exercises // Exercise files.
+            |-- solutions // Solutions for the exercises.
+          |-- framework // Contains files needed for slide presentation, do not edit!
+          |-- slides.html // This is the file you are viewing right now!
+        ```
+        
+        Open Atom and go to **File > Add Project Folder**. A popup will appear.
+
+        Then:
+
+        * navigate to the **llc-intro-to-ruby-data-master** folder
+        * select **exercises**
+        * click **Open**
+
+        The files will now appear in the sidebar.
+      </script>
+    </section>
+    
     <!-- -------------------- -->
     <!-- Exercise 1: Hello World -->
     <!-- -------------------- -->
     <section class="slide" data-markdown>
       <script type="text/template">
-        #Class Exercise 1: Hello World
-
-        Typing into the console is fine to start, but do you really want to type your program every time you run it?
+        #Class Exercise 1: Hello World!
 
         Ruby can run your code from a file with a `.rb` **extension**  
         *(<!-- .element: class="note" -->the letters after `.` in a filename tell your computer which program can run it)*
@@ -798,30 +827,29 @@
 
           ![Create a new ruby File](./framework/img/workshop/saving-ruby-file.png)
 
-        1. Enter the name `hello.rb` in the popup box.
+        1. Enter the name `hello.rb` in the popup box. Make sure to save it into your **exercises** folder.
 
-          ![new ruby file name](framework/img/workshop/new-ruby-file.png)
-
-        1. Now we can add our simple program to the file
+        1. Now we can add our program to the Ruby file.
 
           ```ruby
           # Ask user for input
+          print "Please enter your name: "
+          
           # Assign the input value to a variable
           # Your program waits for the user to hit enter
-          print "Please enter your name: "
           name = gets.chomp
 
           # … then continues to this line
           print "Hello " + name
           ```
 
-        Now how do we use the `Terminal` to run this file?
+        Now how do we use the **Terminal** to run this file?
       </script>
     </section>
 
     <section class="slide" data-markdown>
       <script type="text/template">
-        # Class Exercise 1: Hello World (part 3)
+        # Class Exercise 1: Hello World (part 2)
 
         Code in a file is just text until you **run** it through the ruby program.
 
