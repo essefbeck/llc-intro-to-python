@@ -875,7 +875,7 @@
         Computer-Name:exercises yourusername$ ruby hello.rb
         ```
 
-        The program should now execute the first line, `print "Please enter your name: "` and ask for your name.  
+        The program should now execute the first line in the `hello.rb` file and ask for your name.  
         
         Type in your name and hit `Enter` again and it will say hello to you. It will look something like this:
 
@@ -938,15 +938,14 @@
         irb(main):001:0> weather = "raining"
         ```
 
-        Test the values. The double equals symbol (`==`) will evaluate if the value on the right matches the assigned value.
+        To test the values, the double equals symbol (`==`) will evaluate if the value on the right matches the assigned value.
         ```
         irb(main):001:0> weather == "cold"
         False
         irb(main):001:0> weather == "raining"
         True
         ```
-        We can use these *statements* with our `if` values to test for our weather conditions
-
+        We can use these *statements* with our `if` values to test the weather conditions.
       </script>
     </section>
 
@@ -956,30 +955,37 @@
 
     <section class="slide" data-markdown>
       <script type="text/template">
-        # Class Exercise 2: Weather
+        # Exercise 2: Weather (15mins)
 
-        Create a new file `weather_advice.rb` and write out the code snippet below (avoid the temptation of copy-paste).
+        Open the file `ex2_weather_advice.rb` in the **exercise** folder and follow the instructions in the file.
+        
+        The code snippet in the next slide contains the solution but try to use it as a reference, rather than copy-paste, to understand each line as you type it.
 
-          Try to understand each line as you type it.
+        Try running your file a few times to get different advice (the weather is so unpredictable!)
 
+        **Bonus: ** Update the conditions or add more conditions.
+      </script>
+    </section>
+
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        # Exercise 2 Solution
+        
+        (Also found in your **solutions** folder.)
+        
         ```ruby
         # file: weather_advice.rb
         print "What is the weather? (cold, raining, etc.)"
         weather = gets.chomp
 
         if weather == "cold"
-            print "Wear a sweater!"
+            puts "Wear a sweater!"
         elsif weather == "raining"
-            print "Bring an umbrella"
+            puts "Bring an umbrella"
         else
-            print "Dress normally :)"
+            puts "Dress normally :)"
         end
         ```
-
-        Try running your file a few times to get different advice (the weather is so unpredictable!)
-
-        **Bonus: ** Update the conditions or add more conditions.
-
       </script>
     </section>
 
@@ -987,7 +993,7 @@
       <script type="text/template">
         # String Interpolation
 
-        ruby uses string Interpolation to add variables to strings for output.
+        Ruby uses string Interpolation to add variables to strings for output.
 
         When you want to print results ruby needs a way of knowing what is meant to be the exact word and what is meant to be a variable.
 

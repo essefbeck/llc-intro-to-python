@@ -4,9 +4,9 @@ puts "What is the weather? (cold, raining, etc.): "
 weather = gets.chomp
 
 if (weather == "cold")
-    print "Wear a sweater!"
+    puts "Wear a sweater!"
 elsif (weather == "raining")
-    print "Bring an umbrella"
+    puts "Bring an umbrella"
 else
-    print "Dress normally :)"
+    puts "Dress normally :)"
 end
