@@ -223,10 +223,10 @@
 
     <section class="slide irb" data-markdown>
       <script type="text/template">
-        #Interactive Ruby
+        #Interactive Ruby (IRB)
 
-        The console is an interactive tool used to test and debug code.  
-        Let&rsquo;s open IRB (Interactive Ruby) in the *console*:
+        The *console* is an interactive tool used to test and debug code.  
+        Let&rsquo;s open IRB in the *console*:
         
         | Windows  |  Mac |
         |---|---|
@@ -257,7 +257,7 @@
         Let's try some examples in the console.
         Remember to input your commands after this line: `irb(main):001:0>`
         
-         Also, numbers don't need quotes like in the previous example. (More on this soon.)
+        Also, numbers don't need quotes like in the previous example. (More on this soon.)
 
         ```
         irb(main):001:0> 2 + 2
@@ -674,7 +674,7 @@
         irb(main):001:0> gets
         Sarah
         ```
-        Ruby returns the name plus a `\n` (we'll deal with the `\n` later).
+        Ruby returns the name plus a `\n`. (We'll deal with the `\n` later.)
 
         ```ruby
         => "Sarah\n"
@@ -689,15 +689,15 @@
         Generally, we set the value returned by `gets` to a **variable**.
 
         ```ruby
-        # Set variable name to value of gets
+        # Set variable 'name' to value of 'gets'
         irb(main):001:0> name = gets
         ```
         
         Then add your name to the blank line.
         ```ruby
-        # Set variable name to value of gets
+        # Set variable 'name' to value of 'gets'
         irb(main):001:0> name = gets
-        # Add the name value
+        # Add a value for 'name'
         Sarah
         ```
 
@@ -747,7 +747,7 @@
         
         ```ruby
         irb(main):001:0> name
-        "Sarah"
+        => "Sarah"
         ```
         
         The name *value* is now assigned to the *variable* and will return without the `\n` character!
@@ -813,8 +813,8 @@
           # Your program waits for the user to hit enter
           name = gets.chomp
 
-          # … then continues to this line
-          print "Hello " + name
+          # ... then continues to this line
+          puts "Hello " + name
           ```
       </script>
     </section>
@@ -842,21 +842,51 @@
 
         Code in a file is just text until you **run** it through the Ruby program.
 
-        1. Back in the console, we'll need to navigate to the location of your saved **hello.rb** file.
-            *  `cd` means **Change Directory** and is used to move through the file structure
-            *  `ls` is used to **List** the files in the current directory
+        We'll need to navigate to the location of your saved **hello.rb** file using `cd` (change directory) and `ls` (list files).
+        
+        Open a new tab in the console. The directory location will default to your user directory and will look something like this:
+        
+        ```
+        Computer-Name:~ yourusername$
+        ```
+        
+        Type `ls` at the end of this line to list the directories.  
+        
+        If you saved today's files to your *desktop*, type the command `cd Desktop` to navigate to that folder.
+        
+        ```
+        Computer-Name:~ yourusername$ cd Desktop
+        ```
+        
+        Navigate only to the **exercises** folder (not the `hello.rb` file).
+        
+        ---
+        ###Pro tip!  
+        You can continue to use `cd` and `ls` to get to your *exercises* directory OR just type `cd` and *drag* the folder from your Finder/Explorer into the console!
+      </script>
+    </section>
 
-          ![](framework/img/workshop/commandline.gif)
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        # Class Exercise 1: Hello World (part 2)
 
-        1. Once in the correct directory, type `ruby hello.rb` and hit `Enter` to run your program.
+        Once in the **exercises** directory, type `ruby hello.rb` and hit `Enter` to run your program.
+        ```
+        Computer-Name:exercises yourusername$ ruby hello.rb
+        ```
 
-          ![Click to run your program](./framework/img/workshop/run-ruby.png)
+        The program should now execute the first line, `print "Please enter your name: "` and ask for your name.  
+        
+        Type in your name and hit `Enter` again and it will say hello to you. It will look something like this:
 
-        1. Once you hit `Enter` the program will run.  The program should ask you for your name.  Type in your name and hit `Enter` again and it will say hello to you.
+        ```
+        Computer-Name:exercises yourusername$ ruby hello.rb
+        Please enter your name: Trudy 
+        Hello Trudy
+        Computer-Name:exercises yourusername$
+        ```
 
-          ![Demo of hello_world example](./framework/img/workshop/ruby-output.png)
-
-        1. You can run your program as many times as you like by repeating the steps above.
+        You can run your program as many times as you like by repeating the steps above. Or try changing the greeting in the **hello.rb** file!
       </script>
     </section>
 
