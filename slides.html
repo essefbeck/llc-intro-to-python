@@ -991,7 +991,9 @@
 
     <section class="slide" data-markdown>
       <script type="text/template">
-        # String Interpolation
+        # String Interpolation 
+        
+        **[I think we can take this out since it doesn't look like the final project needs it.]**
 
         Ruby uses string Interpolation to add variables to strings for output.
 
@@ -1024,7 +1026,9 @@
     <section class="slide" data-markdown>
       <script type="text/template">
         # Testing numbers with Math Comparison Operators
-
+        
+        **[Can this example be rewritten to not include #{x}? ]**
+        
         Just as you could check the exact value of a string or number you can use typical math operators to check relative numeric values
 
         `>`: Greater than
@@ -1149,11 +1153,9 @@
       <script type="text/template">
         # Opening a file
 
-        We typically store computer data in files. The data in some files have text (while in others, like images, are&rsquo;s in a format that&rsquo;s only readable by computers).
+        Computer data are typically stored in files. The data in some files have text (while in others, like images, are&rsquo;s in a format that&rsquo;s only readable by computers).
 
-        It&rsquo;s fairly easy in ruby to open a text file and print the contents to the screen.
-
-        We have a couple files from <a href=http://open.canada.ca>open.canada.ca</a> in the excercises folder. Let's try opening them!
+        We have a couple of `.csv` files from <a href=http://open.canada.ca>open.canada.ca</a> in the exercises folder. Let's try opening and reading the `no-emissions.csv` file.
 
         ```ruby
         irb(main):001:0> emissions = File.open(".../llc-intro-to-ruby/exercises/no-emissions.csv")
@@ -1173,7 +1175,7 @@
 
         In the `no-emissions.csv` file, each line of the file represents a country and the amount of nitrogen oxide emissions during a period of time.
 
-        Let&rsquo;s print out a few individual lines
+        Let&rsquo;s print out a few individual lines.
 
         ```ruby
         irb(main):001:0> emissions = File.open('./exercises/no-emissions.csv')
@@ -1198,21 +1200,23 @@
       <script type="text/template">
         # Comma-Separated Values (CSV) Files
 
-        In the previous slide we printed out four lines in the file, one at a time.
-        The first line is the title of the file, the second a space, the third is a legend, and the fourth is the first entry.
-
+        Let's take closer look at the four printed lines from the previous example.
+        
         ```
         "\"Nitrogen oxide emissions by country, 2002 and 2012\",,,,\r\n"
         ",,,,\r\n"
         "Country,2002 Nitrogen oxide emissions (kilotonnes),2012 Nitrogen oxide emissions... etc."
         "United States,21632,12258,1.8,0.9\r\n"
         ```
+        
+        The first line is the title of the file, the second a space, the third is a legend, and the fourth is the first entry.
 
         Notice that all three lines have columns, separated by a comma (`,`)
 
-        Dividing columns by commas is called Comma Seperated Values, or **CSV** that is used to represent spreadsheet-like data
+        Dividing columns by commas is called Comma Separated Values, or **CSV** that is used to represent spreadsheet-like data.
 
-        This is a widely used file-format because it&rsquo;s such a simple representation of rows and columns of data. It doesn&rsquo;t matter whether you&rsquo;re on a Mac, Windows, Linux or even on a web app like Google Docs – everyone can use this data.
+        ---
+        <!-- .element: class="note" -->**Note**: This is a widely used file-format because it&rsquo;s such a simple representation of rows and columns of data. It doesn&rsquo;t matter whether you&rsquo;re on a Mac, Windows, Linux or even on a web app like Google Docs – everyone can use this data.
         </script>
     </section>
 
@@ -1220,12 +1224,11 @@
       <script type="text/template">
         # Reading all the lines in a file
 
-        It&rsquo;s all well and good to print out the lines in a file one-at-a-time while you&rsquo;re learning, but surely, there&rsquo;s a better way to read *all* the lines in a file.
+        It&rsquo;s all well and good to print out the lines in a file one-at-a-time, but surely, there&rsquo;s a better way to read *all* the lines in a file.
 
-        In programming, when you want to perform the same action many times in a row, we use **loops**. In ruby, there are lots of types!
-        But here we will use a `for` loop.
+        To perform the same action many times in a row, use **loops**. In Ruby, there are lots of types of loops! The example below uses a `for` loop.
 
-        If we want to print each of the rows in our file, we can use the following code:
+        To print each of the rows in the file, use the following code sample:
 
         ```ruby
         irb(main):001:0> emissions = File.open('./exercises/no-emissions.csv')
@@ -1235,8 +1238,10 @@
         irb(main):001:0> emissions.close()
         ```
 
-        More info:<!-- .element: class="footnote" --> https://docs.ruby.org/2/tutorial/controlflow.html#for-statements
-
+        ---
+        ###Resource
+        
+        https://docs.ruby.org/2/tutorial/controlflow.html#for-statements
       </script>
     </section>
 
