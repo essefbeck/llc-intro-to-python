@@ -22,7 +22,7 @@
 
   <main>
     <section class="slide welcome">
-      <h1><img class="logo-stacked" src="framework/img/llc-logo-stacked-white.png" alt="Ladies Learning Code logo">Welcome! [link to be added]</h1>
+      <h1><img class="logo-stacked" src="framework/img/llc-logo-stacked-white.png" alt="Ladies Learning Code logo">Welcome!</h1>
 
       <div class="instructions no-bullet-list">
         <!-- ADD WIFI INFO HERE -->
@@ -34,7 +34,7 @@
 
         <h2>Download<br> & Install</h2>
         <ul class="downloads">
-          <li>Learner files (zip file): <a href="#">http://short-url-to-zip.com</a>
+          <li>Learner files (zip file): <a href="https://github.com/ladieslearningcode/llc-intro-to-ruby-data/archive/master.zip">http://bit.ly/llc-ruby-data</a>
             <ul>
               <li>unzip the learner file (<em>extract all</em> if you’re on a PC)</li>
               <li>open <strong>slides.html</strong> in the browser to view the slides</li>
@@ -87,7 +87,7 @@
 
         We're going to be data scientists!
 
-        We'll learn to process, manipulate, and sort data using open datasets from [open.canada.ca](http://open.canada.ca). These kind of programs that 'parse' data are used frequently in web apps such as [Open Parliment](https://openparliament.ca/).
+        We'll learn to process, manipulate, and sort data using open datasets from [open.canada.ca](http://open.canada.ca). These kind of programs that 'parse' data are used frequently in web apps such as [Open Parliament](https://openparliament.ca/).
 
         Today, you'll learn to 'think' like a computer as you gather insights from open data provided by The Government of Canada.
       </script>
@@ -123,7 +123,7 @@
     
     <section class="slide" data-markdown>
       <script type="text/template">
-        #1. Your computer speaks a different language.
+        #1. Your computer speaks a different language
 
         This is how your computer wishes you could speak to it:
         
@@ -133,7 +133,7 @@
 
     <section class="slide" data-markdown>
       <script type="text/template">
-        #2. Your computer is not very smart.
+        #2. Your computer is not very smart
 
         Computers need:
         
@@ -197,7 +197,7 @@
 
     <section class="slide" data-markdown>
       <script type="text/template">
-      #Development Environment [link to be added]
+      #Development Environment
 
       You will need:
 
@@ -206,7 +206,8 @@
         * **Mac**: https://www.ruby-lang.org/en/downloads/
         * Ruby comes by default on Mac OSX and the above link is for different versions!
       1. Text editor - today we'll be using **[Atom](https://atom.io/)**
-      1. Learner files (contains exercise and solution files)
+      1. Terminal/Console
+      1. [Learner files](https://github.com/ladieslearningcode/llc-intro-to-ruby-data/archive/master.zip) (contains exercise and solution files)
       </script>
     </section>
 
@@ -217,34 +218,6 @@
         Using a good text editor with integrated and useful features such as syntax highlighting, will help us write code faster with fewer mistakes.
 
         ![Flawless](http://24.media.tumblr.com/3ef778f016b84d4ea48d58a0c8437d80/tumblr_n0pol8ork51qkomroo1_500.gif) <!-- .element: style="width: 50%" -->
-      </script>
-    </section>
-
-    <section class="slide" data-markdown>
-      <script type="text/template">
-        #Setting up your project files
-
-        Open Atom. From the **File** menu, select **Add Project Folder...**
-
-        ![](framework/img/workshop/add-project-1.jpg)
-
-        Then navigate to the **llc-intro-to-ruby-master** folder & select **Open**.
-
-        ![](framework/img/workshop/add-project-2.jpg)
-
-        All of the project files will now appear in your sidebar.  Select the arrows to open the folders within.
-      </script>
-    </section>
-
-    <section class="slide" data-markdown>
-      <script type="text/template">
-        #Setting up your project files
-        
-        Today, you will be working from the **exercises** folder.  
-        
-        The **solutions** folder contains today&rsquo;s exercise answer keys.
-
-        The other folders & files are needed to make this slide presentation work so avoid making edits to them!
       </script>
     </section>
 
@@ -405,14 +378,14 @@
         
         ```ruby
         irb(main):001:0> add(1, 2)
-        3
+        => 3
         ```
         
         The benefit is now we can sub in any 2 numbers without having to rewrite the code
         
         ```ruby
         irb(main):001:0> add(3, 4)
-        7
+        => 7
         ```
         We won't create our own functions in today's exercises, but we'll use those provided by ruby and its libraries.
       </script>
@@ -456,7 +429,7 @@
         irb(main):001:0> prints 2 + 2
         4=> nil
         ```
-        Notice the **nil** remains on the same line as the response?
+        Notice the `nil` remains on the same line as the response?
 
         Let's try it in IRB!
         ```
@@ -799,13 +772,14 @@
           |-- slides.html // This is the file you are viewing right now!
         ```
         
-        Open Atom and go to **File > Add Project Folder**. A popup will appear.
-
-        Then:
+        Open Atom and go to **File > Add Project Folder**. 
+        
+        ![](framework/img/workshop/add-project-1.jpg)
+        
+        A popup will appear. Then:
 
         * navigate to the **llc-intro-to-ruby-data-master** folder
-        * select **exercises**
-        * click **Open**
+        * select **exercises** and click **Open**
 
         The files will now appear in the sidebar.
       </script>
@@ -842,8 +816,23 @@
           # … then continues to this line
           print "Hello " + name
           ```
-
-        Now how do we use the **Terminal** to run this file?
+      </script>
+    </section>
+    
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        #But how do we run this file?
+        
+        We'll need to use the console and couple of **command line** instructions.
+        
+        `cd` means **Change Directory** and is used to move through the file structure
+        
+        `ls` is used to **List** the files in the current directory
+        
+        ---
+        ###Resources 
+        * [Don't Fear the Command Line](http://readwrite.com/2014/07/18/command-line-tutorial-intro)
+        * [Codecademy: Learn the Command Line](https://www.codecademy.com/learn/learn-the-command-line)
       </script>
     </section>
 
@@ -851,14 +840,13 @@
       <script type="text/template">
         # Class Exercise 1: Hello World (part 2)
 
-        Code in a file is just text until you **run** it through the ruby program.
+        Code in a file is just text until you **run** it through the Ruby program.
 
-        1. Open up your `Terminal` and move to the location your file is saved
+        1. Back in the console, we'll need to navigate to the location of your saved **hello.rb** file.
             *  `cd` means **Change Directory** and is used to move through the file structure
             *  `ls` is used to **List** the files in the current directory
 
           ![](framework/img/workshop/commandline.gif)
-
 
         1. Once in the correct directory, type `ruby hello.rb` and hit `Enter` to run your program.
 
