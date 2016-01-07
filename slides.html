@@ -113,20 +113,20 @@
       * Final Project
       </script>
     </section>
-    
+
     <section class="slide title" data-markdown>
       <script type="text/template">
         #What is programming?
         ##There are two things you should know about your computer
       </script>
     </section>
-    
+
     <section class="slide" data-markdown>
       <script type="text/template">
         #1. Your computer speaks a different language
 
         This is how your computer wishes you could speak to it:
-        
+
         ![](framework/img/workshop/machine-language.jpg)
       </script>
     </section>
@@ -136,10 +136,10 @@
         #2. Your computer is not very smart
 
         Computers need:
-        
+
         * *very specific* instructions
         * instructions in a form that it can understand
-        
+
         A programming language makes it easier for you to give the computer instructions.
       </script>
     </section>
@@ -149,7 +149,7 @@
         #Programming language
 
         >It's made up of *simple elements*, that when *combined together*, are used to write a set of *instructions* that the computer then breaks down and interprets as its own language.
-        
+
         Programming languages have syntax and "grammar rules", just like human languages.
       </script>
     </section>
@@ -177,7 +177,7 @@
         * Testing
         * Web Applications (Ruby on Rails)
         * and some of your favorite websites!
-        
+
         ![](framework/img/workshop/logo-twitter.png)
         ![](framework/img/workshop/logo-shopify.png)
         ![](framework/img/workshop/logo-groupon.png)
@@ -225,9 +225,9 @@
       <script type="text/template">
         #Interactive Ruby (IRB)
 
-        The *console* is an interactive tool used to test and debug code.  
+        The *console* is an interactive tool used to test and debug code.
         Let&rsquo;s open IRB in the *console*:
-        
+
         | Windows  |  Mac |
         |---|---|
         | Open Interactive Ruby from the Ruby section of your Start Menu.  | Open **Applications > Utilities > Terminal**. <br>Type `irb` and hit enter. |
@@ -236,9 +236,9 @@
         ```ruby
         irb(main):001:0>
         ```
-        
+
         Type your instructions at the end of the line (with the quotes):
-        
+
         ```ruby
         irb(main):001:0> "Hello!"
         ```
@@ -256,7 +256,7 @@
 
         Let's try some examples in the console.
         Remember to input your commands after this line: `irb(main):001:0>`
-        
+
         Also, numbers don't need quotes like in the previous example. (More on this soon.)
 
         ```
@@ -352,15 +352,15 @@
         ```
       </script>
     </section>
-    
+
     <section class="slide" data-markdown>
       <script type="text/template">
         #Define the function
-        
-        This doesn't actually run the code.  We're just telling the computer what to expect. 
-        
+
+        This doesn't actually run the code.  We're just telling the computer what to expect.
+
         In the below example, the `add` function takes `a` and `b` as arguments and will **return** the result.
-        
+
         ```ruby
         irb(main):001:0> def add(a, b)
         ...     return a + b
@@ -369,20 +369,20 @@
         ```
       </script>
     </section>
-    
+
     <section class="slide" data-markdown>
       <script type="text/template">
         #Call the function
-        
+
         After *defining* the fuction, *call* it by typing the name of the function, `add()` and substituting values where the arguments were defined `(a,b)`.
-        
+
         ```ruby
         irb(main):001:0> add(1, 2)
         => 3
         ```
-        
+
         The benefit is now we can sub in any 2 numbers without having to rewrite the code
-        
+
         ```ruby
         irb(main):001:0> add(3, 4)
         => 7
@@ -419,28 +419,28 @@
         The function `print` can also be used to output values.
 
         The difference between `puts` and `print` is `puts` adds a new line to end of the output and `print` does not.
-        
+
         ```
         irb(main):001:0> puts 2 + 2
-        4 
+        4
         => nil
         ```
         ```
-        irb(main):001:0> prints 2 + 2
+        irb(main):001:0> print 2 + 2
         4=> nil
         ```
         Notice the `nil` remains on the same line as the response?
 
         Let's try it in IRB!
         ```
-        irb(main):001:0> puts "Hello World!"
+        irb(main):001:0> print "Hello World!"
         Hello World! => nil
         ```
         ```
-        irb(main):001:0> puts 2 + 2
+        irb(main):001:0> print 2 + 2
         4 => nil
         ```
-        
+
       </script>
     </section>
 
@@ -465,8 +465,8 @@
 
         Ruby comes with a whole set of predefined functions.  These are sets of code that are so regularly used by most programmers that it makes sense for them to be part of the programming language itself.
 
-        One such function is **concatenation**. With this we can "add" strings together. We call this function using the `+` symbol. 
-        
+        One such function is **concatenation**. With this we can "add" strings together. We call this function using the `+` symbol.
+
         ```
         irb(main):001:0> print "Ladies " + "Learning " + "Code"
         Ladies Learning Code => nil
@@ -516,7 +516,7 @@
         irb(main):001:0> print 2 + "2".to_i
         4 => nil
         ```
-        `to_i` is another predefined function in Ruby.  
+        `to_i` is another predefined function in Ruby.
         It converts a string to an integer.
       </script>
     </section>
@@ -524,9 +524,9 @@
     <section class="slide" data-markdown>
       <script type="text/template">
         #Dot Notation
-        
+
         The most common way we call functions is with **dot notation**.
-        
+
         In other words, add a period, then the function name *after* the object you want to call it on.
 
         For example:
@@ -547,8 +547,8 @@
         irb(main):001:0> print 1 / 2
         0 => nil
         ```
-        This happens because Ruby sees 2 integers and will return an integer. Integer **classes** don&rsquo;t have decimal parts, so it must be converted to **floats**, since this number **class** can handle decimals.  
-        
+        This happens because Ruby sees 2 integers and will return an integer. Integer **classes** don&rsquo;t have decimal parts, so it must be converted to **floats**, since this number **class** can handle decimals.
+
         Use dot notation and the `.to_f` function.
         ```
         irb(main):001:0> print 1.to_f / 2.to_f
@@ -590,11 +590,11 @@
     <section class="slide" data-markdown>
       <script type="text/template">
         #Variables
-        In programming, we usually want to store a value to use later.  
+        In programming, we usually want to store a value to use later.
         **Variables** store data in your computer&rsquo;s memory.
-        
+
         Use a **variable name** to fetch their value (kind of like a bookmark in a book). The equal (`=`) symbol *assigns* a value to a variable.
-        
+
         Let's go over these example:
 
         ```ruby
@@ -627,7 +627,7 @@
 
         What do you think the value of `x * y` will be? <span class="delayed">50</span>
 
-        Why?  
+        Why?
         You changed <!-- .element: class="delayed" -->`y`, but the old value of `x` is still in memory.
         Ruby will remember variable names until you close IRB.
       </script>
@@ -638,9 +638,9 @@
         # Variable naming conventions
 
         * can only use letters, numbers and the underscore (`_`); no spaces
-        * words can be separated with an underscore `_`   
+        * words can be separated with an underscore `_`
         i.e. `ladies_learning_code`
-        * cannot begin with a number  
+        * cannot begin with a number
         i.e. `1day` gives you an error while `day1` is fine
 
         The names we&rsquo;ll use today are descriptive, but otherwise have no special meaning to Ruby.
@@ -685,14 +685,14 @@
     <section class="slide" data-markdown>
       <script type="text/template">
         #Working with user input: Variables
-        
+
         Generally, we set the value returned by `gets` to a **variable**.
 
         ```ruby
         # Set variable 'name' to value of 'gets'
         irb(main):001:0> name = gets
         ```
-        
+
         Then add your name to the blank line.
         ```ruby
         # Set variable 'name' to value of 'gets'
@@ -714,7 +714,7 @@
       <script type="text/template">
         #What is `\n`?
 
-        `\n` is Ruby's way of putting a *new line* after the input.  
+        `\n` is Ruby's way of putting a *new line* after the input.
         Use the method `chomp` to remove the last character of a string.
 
         Let's create a program in the console that will remove the `\n` character.
@@ -728,40 +728,40 @@
         What is your name?
         => nil
         ```
-        
-        2.&nbsp;Define a `name` variable and assign the value of `gets` to it.  
+
+        2.&nbsp;Define a `name` variable and assign the value of `gets` to it.
         Add `chomp` to remove the new line character.
         ```ruby
         irb(main):001:0> name = gets.chomp
         ```
-        
+
         3.&nbsp;Type your name in the blank line and hit the **enter** key. The value will be  *returned* to you.
-        
+
         ```
         irb(main):001:0> name = gets.chomp
         Sarah
         => "Sarah"
         ```
 
-        4.&nbsp;Type the variable `name` and **enter**. 
-        
+        4.&nbsp;Type the variable `name` and **enter**.
+
         ```ruby
         irb(main):001:0> name
         => "Sarah"
         ```
-        
+
         The name *value* is now assigned to the *variable* and will return without the `\n` character!
       </script>
     </section>
-    
+
     <section class="slide" data-markdown>
       <script type="text/template">
         #Working with a Text Editor
-        
+
         Typing into the console is fine to start, but do you really want to type your program every time you run it?
-        
+
         Let's open our **exercises** folder in Atom to get ready to work in the text editor instead of the console. This will also make it easier to write larger blocks of code.
-        
+
         Inside of the folder you downloaded today, there a few other folders.
 
         ```
@@ -771,11 +771,11 @@
           |-- framework // Contains files needed for slide presentation, do not edit!
           |-- slides.html // This is the file you are viewing right now!
         ```
-        
-        Open Atom and go to **File > Add Project Folder**. 
-        
+
+        Open Atom and go to **File > Add Project Folder**.
+
         ![](framework/img/workshop/add-project-1.jpg)
-        
+
         A popup will appear. Then:
 
         * navigate to the **llc-intro-to-ruby-data-master** folder
@@ -784,7 +784,7 @@
         The files will now appear in the sidebar.
       </script>
     </section>
-    
+
     <!-- -------------------- -->
     <!-- Exercise 1: Hello World -->
     <!-- -------------------- -->
@@ -792,7 +792,7 @@
       <script type="text/template">
         #Class Exercise 1: Hello World!
 
-        Ruby can run your code from a file with a `.rb` **extension**  
+        Ruby can run your code from a file with a `.rb` **extension**
         *(<!-- .element: class="note" -->the letters after `.` in a filename tell your computer which program can run it)*
 
         Let&rsquo;s create our first Ruby file!
@@ -808,7 +808,7 @@
           ```ruby
           # Ask user for input
           print "Please enter your name: "
-          
+
           # Assign the input value to a variable
           # Your program waits for the user to hit enter
           name = gets.chomp
@@ -818,19 +818,19 @@
           ```
       </script>
     </section>
-    
+
     <section class="slide" data-markdown>
       <script type="text/template">
         #But how do we run this file?
-        
+
         We'll need to use the console and couple of **command line** instructions.
-        
+
         `cd` means **Change Directory** and is used to move through the file structure
-        
+
         `ls` is used to **List** the files in the current directory
-        
+
         ---
-        ###Resources 
+        ###Resources
         * [Don't Fear the Command Line](http://readwrite.com/2014/07/18/command-line-tutorial-intro)
         * [Codecademy: Learn the Command Line](https://www.codecademy.com/learn/learn-the-command-line)
       </script>
@@ -843,25 +843,25 @@
         Code in a file is just text until you **run** it through the Ruby program.
 
         We'll need to navigate to the location of your saved **hello.rb** file using `cd` (change directory) and `ls` (list files).
-        
+
         Open a new tab in the console. The directory location will default to your user directory and will look something like this:
-        
+
         ```
         Computer-Name:~ yourusername$
         ```
-        
-        Type `ls` at the end of this line to list the directories.  
-        
+
+        Type `ls` at the end of this line to list the directories.
+
         If you saved today's files to your *desktop*, type the command `cd Desktop` to navigate to that folder.
-        
+
         ```
         Computer-Name:~ yourusername$ cd Desktop
         ```
-        
+
         Navigate only to the **exercises** folder (not the `hello.rb` file).
-        
+
         ---
-        ###Pro tip!  
+        ###Pro tip!
         You can continue to use `cd` and `ls` to get to your *exercises* directory OR just type `cd` and *drag* the folder from your Finder/Explorer into the console!
       </script>
     </section>
@@ -875,13 +875,13 @@
         Computer-Name:exercises yourusername$ ruby hello.rb
         ```
 
-        The program should now execute the first line in the `hello.rb` file and ask for your name.  
-        
+        The program should now execute the first line in the `hello.rb` file and ask for your name.
+
         Type in your name and hit `Enter` again and it will say hello to you. It will look something like this:
 
         ```
         Computer-Name:exercises yourusername$ ruby hello.rb
-        Please enter your name: Trudy 
+        Please enter your name: Trudy
         Hello Trudy
         Computer-Name:exercises yourusername$
         ```
@@ -958,7 +958,7 @@
         # Exercise 2: Weather (15mins)
 
         Open the file `ex2_weather_advice.rb` in the **exercise** folder and follow the instructions in the file.
-        
+
         The code snippet in the next slide contains the solution but try to use it as a reference, rather than copy-paste, to understand each line as you type it.
 
         Try running your file a few times to get different advice (the weather is so unpredictable!)
@@ -970,9 +970,9 @@
     <section class="slide" data-markdown>
       <script type="text/template">
         # Exercise 2 Solution
-        
+
         (Also found in your **solutions** folder.)
-        
+
         ```ruby
         # file: weather_advice.rb
         print "What is the weather? (cold, raining, etc.)"
@@ -991,8 +991,8 @@
 
     <section class="slide" data-markdown>
       <script type="text/template">
-        # String Interpolation 
-        
+        # String Interpolation
+
         **[I think we can take this out since it doesn't look like the final project needs it.]**
 
         Ruby uses string Interpolation to add variables to strings for output.
@@ -1026,9 +1026,9 @@
     <section class="slide" data-markdown>
       <script type="text/template">
         # Testing numbers with Math Comparison Operators
-        
+
         **[Can this example be rewritten to not include #{x}? ]**
-        
+
         Just as you could check the exact value of a string or number you can use typical math operators to check relative numeric values
 
         `>`: Greater than
@@ -1201,14 +1201,14 @@
         # Comma-Separated Values (CSV) Files
 
         Let's take closer look at the four printed lines from the previous example.
-        
+
         ```
         "\"Nitrogen oxide emissions by country, 2002 and 2012\",,,,\r\n"
         ",,,,\r\n"
         "Country,2002 Nitrogen oxide emissions (kilotonnes),2012 Nitrogen oxide emissions... etc."
         "United States,21632,12258,1.8,0.9\r\n"
         ```
-        
+
         The first line is the title of the file, the second a space, the third is a legend, and the fourth is the first entry.
 
         Notice that all three lines have columns, separated by a comma (`,`)
@@ -1240,7 +1240,7 @@
 
         ---
         ###Resource
-        
+
         https://docs.ruby.org/2/tutorial/controlflow.html#for-statements
       </script>
     </section>
