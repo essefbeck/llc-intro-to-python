@@ -87,7 +87,7 @@
 
         We're going to be data scientists!
 
-        We'll learn to process, manipulate, and sort data using open datasets from [open.canada.ca](http://open.canada.ca). These kind of programs that 'parse' data are used frequently in web apps such as [Open Parliament](https://openparliament.ca/).
+        We'll learn to process, manipulate, and sort data using open datasets from [open.canada.ca](http://open.canada.ca). These programs that 'parse' data are used in web apps such as [Open Parliament](https://openparliament.ca/).
 
         Today, you'll learn to 'think' like a computer as you gather insights from open data provided by The Government of Canada.
       </script>
@@ -989,36 +989,6 @@
       </script>
     </section>
 
-    <section class="slide" data-markdown>
-      <script type="text/template">
-        # String Interpolation
-
-        **[I think we can take this out since it doesn't look like the final project needs it.]**
-
-        Ruby uses string Interpolation to add variables to strings for output.
-
-        When you want to print results ruby needs a way of knowing what is meant to be the exact word and what is meant to be a variable.
-
-        ```ruby
-        irb(main):001:0> if weather == "cold"
-              print "the weather today is #{weather}"
-            end
-        ```
-
-        The `#{weather}` tells ruby to use the variable weather, rather than just outputing the word 'weather'.
-        Try typing each example into the command line.
-
-        ```ruby
-        irb(main):001:0> weather = "cold"
-        irb(main):001:0> print "the weather today is weather"
-        ```
-        ```ruby
-        irb(main):001:0> weather = "sunny"
-        irb(main):001:0> print "the weather today is #{weather}"
-        ```
-      </script>
-    </section>
-
 <!-- -------------------- -->
 <!-- More conditions -->
 <!-- -------------------- -->
@@ -1026,8 +996,6 @@
     <section class="slide" data-markdown>
       <script type="text/template">
         # Testing numbers with Math Comparison Operators
-
-        **[Can this example be rewritten to not include #{x}? ]**
 
         Just as you could check the exact value of a string or number you can use typical math operators to check relative numeric values
 
@@ -1043,12 +1011,15 @@
         False => nil
         irb(main):001:0> print x >= 5
         True => nil
+        ```
 
-<!-- TEMP: This could be hard for learners to understand, we should explain #{}-->
+        Here we're using the to_s function to turn "5" into a string for printing!
+
+        ```ruby
         irb(main):001:0> if x >= 5
-        ...     print " #{x} is greater than or equal to 5"
+        ...     print x.to_s + " is greater than or equal to 5"
         ... else
-        ...     print " #{x} is less than 5"
+        ...     print x.to_s + " is less than 5"
         ... end
         ...
         5 is greater than or equal to 5
@@ -1315,36 +1286,17 @@
           <type 'dict'>
       </script>
     </section>
-<!-- TEMP: There are no dictionaries in Ruby I think we should cut this and allocate the time elsewhere
+
     <section class="slide" data-markdown>
       <script type="text/template">
-        # Dictionaries
-
-        This time, when we printed the values from the CSV file, instead of getting comma-separated values, we got a `dict`ionary representing each row in the file.
-
-        Instead of having to remember which *column* represents city, we can access it with a keyword:
-
-        ```ruby
-        irb(main):001:0> chapter = {'City': 'Vancouver', 'Chapter Lead(s)': 'Meghan', 'Province': 'BC'}
-        irb(main):001:0> print(chapter['City'])
-        Vancouver
-        irb(main):001:0> print(chapter['Province'])
-        BC
-        irb(main):001:0> print(chapter['Chapter Lead(s)'])
-        Meghan
-        ```
-      </script>
-    </section>
--->
-    <section class="slide" data-markdown>
-      <script type="text/template">
-        # Working in a `for` loop
+        # Working in a `foreach` loop
 
         Before lunch, we learned how the `for` loops can repeat the same set of intructions on a collection of things - like our CSV rows.
 
-        * The `for` loop assigns *each row* in turn to the `emissions` variable
+        * `foreach` is a built in function in the CSV library that makes reading CSVs easier, it works just like a `for` loop
+        * The `foreach` loop assigns *each row* in turn to the `emissions` variable
         * We group instructions together with the same indentation
-        * All the instructions in the indented block, are run for each `chapter`
+        * All the instructions in the indented block, are run for each `country`
 
         ```ruby
         irb(main):001:0> require 'csv'
@@ -1365,7 +1317,7 @@
       <script type="text/template">
         # Exercise 4: Find the difference between a country's 2002 emissions and their 2012 emissions (15 mins)
 
-        You already have the tools you need to find your chapter lead(s) in the `no-emissions.csv`.
+        You already have the tools you need to find the countries in the `no-emissions.csv`.
 
         You'll find the file **ex4_emissions_comparison.rb** in the **exercises** folder filled with comments. Apply what we've learned so far, as suggested by the comments.
 
@@ -1411,8 +1363,6 @@
           count += 1
         end
 
-        count -= 3
-
         puts "There are " + count.to_s + " countries in the survey."
 
         ```
@@ -1446,7 +1396,6 @@
         Now that you know how to find a string within a string, we are going to look at some more data!
         We are going to switch to using the file rent-data.csv, which is the file we will use in our final project!
 
-<!-- TEMP: This might need a more thorough explanation of the data -->
         If you open the **rent-data.csv** file you can see that both provinces and cities are listed for the historical rent data.
 
         Remember, `.include?()` returns 'true' if the search string is in the row and 'false' if it is not.
