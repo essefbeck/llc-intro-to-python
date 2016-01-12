@@ -381,7 +381,7 @@
         => 3
         ```
 
-        The benefit is now we can sub in any 2 numbers without having to rewrite the code
+        The benefit is now we can sub in any 2 numbers without having to rewrite the code.
 
         ```ruby
         irb(main):001:0> add(3, 4)
@@ -999,9 +999,9 @@
 
         Just as you could check the exact value of a string or number you can use typical math operators to check relative numeric values
 
-        `>`: Greater than
-        `<`: Less than
-        `>=`: Greater than or equal to
+        `>`: Greater than  
+        `<`: Less than  
+        `>=`: Greater than or equal to  
         `<=`: Less than or equal to
 
         ```ruby
@@ -1013,7 +1013,7 @@
         True => nil
         ```
 
-        Here we're using the to_s function to turn "5" into a string for printing!
+        Here we're using the `to_s` function to turn "5" into a string for printing!
 
         ```ruby
         irb(main):001:0> if x >= 5
@@ -1033,8 +1033,8 @@
 
         Sometimes, you can&rsquo;t neatly capture your conditions with one expression. You need to combine multiple expressions to determine what to do next.
 
-        `and`: both things must be true
-        `or`: Either one, or both things must be true.
+        `and`: both things must be true  
+        `or`: either one, or both things must be true
 
         ```ruby
         weather = "cold"
@@ -1092,9 +1092,9 @@
 
         Instead of telling your program if it&rsquo;s cold, you can input the temperature and let it decide what to do.
 
-        Open the **smarter_weather.rb** and use math comparison operators as well as `and`/`or` to follow the instructions.
+        Open **smarter_weather.rb** and follow the instructions. Use math comparison operators as well as `and`/`or` to complete the exercise.
 
-        ```
+        ```ruby
         # if the weather is greater than or equal to 25 degrees
         if "replace this with the right condition"
             print "Go to the beach!"
@@ -1109,7 +1109,6 @@
         Feel free to choose your own temperatures and messages :)
       </script>
     </section>
-
 
     <section class="slide title ruby-background" data-markdown>
       <script type="text/template">
@@ -1143,10 +1142,10 @@
       <script type="text/template">
         # One line at a time
 
-        In order to make use of the data in a file, we need to make sense of small portions at a time.
+        In order to make use of the data in a file, we need to make sense of small portions of data at a time.
 
-        In the `no-emissions.csv` file, each line of the file represents a country and the amount of nitrogen oxide emissions during a period of time.
-
+        In the `no-emissions.csv` file, each line of the file represents a country and the amount of nitrogen oxide emissions during a period of time. 
+        
         Let&rsquo;s print out a few individual lines.
 
         ```ruby
@@ -1198,9 +1197,9 @@
 
         It&rsquo;s all well and good to print out the lines in a file one-at-a-time, but surely, there&rsquo;s a better way to read *all* the lines in a file.
 
-        To perform the same action many times in a row, use **loops**. In Ruby, there are lots of types of loops! The example below uses a `for` loop.
-
-        To print each of the rows in the file, use the following code sample:
+        To perform the same action many times in a row, use **loops**. In Ruby, there are lots of types of loops! 
+        
+        The example below uses a `for` loop to print each of the rows in the file.
 
         ```ruby
         irb(main):001:0> emissions = File.open('./exercises/no-emissions.csv')
@@ -1209,7 +1208,6 @@
         irb(main):004:1> end
         irb(main):001:0> emissions.close()
         ```
-
         ---
         ###Resource
 
@@ -1232,7 +1230,7 @@
       <script type="text/template">
         # Libraries
 
-        ruby has wonderful built in **libraries** which are collections of code that other people have written. Today we&rsquo;ll use the **csv** library. It contains instructions that tell ruby how to work with CSV files.
+        Ruby has wonderful built in **libraries** which are collections of code that other people have written. Today we&rsquo;ll use the **csv** library. It contains instructions that tell Ruby how to work with CSV files.
 
         This library will help us makes sense of the data contained in a CSV file to learn more from Canada's Open Data.
 
@@ -1246,7 +1244,7 @@
 
         So far, we've been writing all our code in the console or in one file. When you use a library, you don't want to copy all that code into your file, otherwise it would become huge!
 
-        In ruby, you can **require** the functions and other structures so you can use the code without having it in your file. Then you can use functions (and other structures) to do your bidding!
+        In Ruby, you can **require** the functions and other structures so you can use the code without having it in your file. Then you can use functions (and other structures) to do your bidding!
 
         In your console, import the `csv` library as follows.
 
@@ -1256,7 +1254,7 @@
 <!-- TEMP: I don't think you can do this in IRB
         If you then type `csv.` and wait, it will show you a list of everything in that module.
 -->
-        More info:<!-- .element: class="footnote" --> https://docs.ruby.org/2/tutorial/modules.html
+        More info:<!-- .element: class="note" --> https://docs.ruby.org/2/tutorial/modules.html
       </script>
     </section>
 
@@ -1267,9 +1265,9 @@
       <script type="text/template">
         # Reading data from a CSV file
 
-        The CSV libary has a number of different tools for extracting actual data from a CSV file. Instead of a line of comma-separated values, we can access individual values easily (like the cells of a spreadsheet).
+        The CSV library has a number of different tools for extracting actual data from a CSV file. Instead of a line of comma-separated values, we can access individual values easily (like the cells of a spreadsheet).
 
-        We can use for loops on CSV files!
+        We can use `for` loops on CSV files!
 
         * First we open the file
         * Then, we require the `csv` library
@@ -1277,13 +1275,13 @@
 
         <a href="http://ruby-doc.org/stdlib-1.9.2/libdoc/csv/rdoc/CSV.html#method-c-readlines">Ruby Docs</a> have a list of all functions available in CSV.
 
-          ```
-          irb(main):001:0> require 'csv'
-          irb(main):001:0> emissions_file = CSV.open('./exercises/no-emissions.csv')
-          irb(main):014:0> emissions_file.read
-          ```
-          ** Notice how the data is parsed acording to the commas? This means we can read the data by column or by row!
-          <type 'dict'>
+        ```
+        irb(main):001:0> require 'csv'
+        irb(main):001:0> emissions_file = CSV.open('./exercises/no-emissions.csv')
+        irb(main):014:0> emissions_file.read
+        ```
+        ** Notice how the data is parsed according to the commas? This means we can read the data by column or by row!
+        <type 'dict'>
       </script>
     </section>
 
@@ -1315,7 +1313,7 @@
 
     <section class="slide" data-markdown>
       <script type="text/template">
-        # Exercise 4: Find the difference between a country's 2002 emissions and their 2012 emissions (15 mins)
+        # Exercise 4: Find the difference between a country's 2002 emissions and their 2012 emissions (20 mins)
 
         You already have the tools you need to find the countries in the `no-emissions.csv`.
 
@@ -1336,14 +1334,13 @@
       </script>
     </section>
 
-
     <section class="slide" data-markdown>
       <script type="text/template">
         # Counting loops
 
         Sometimes you want to keep track of the number of times something happened.
 
-        We can add `1` to the current value of a variable, and assign it back to the same variable. ruby processes everything to the right of the `=` before assignining the result.
+        We can add `1` to the current value of a variable, and assign it back to the same variable. Ruby processes everything to the right of the equals symbol (`=`) before assigning the result.
 
         ```ruby
         irb(main):001:0> count = 0
@@ -1366,7 +1363,6 @@
         puts "There are " + count.to_s + " countries in the survey."
 
         ```
-
       </script>
     </section>
 
@@ -1374,11 +1370,10 @@
       <script type="text/template">
         # Finding a word in a string
 
-        So far, we've compared entire strings to each other `"ruby" == "ruby"`.
-
+        So far, we've compared entire strings to each other `"ruby" == "ruby"`.  
         But what if you want to find a word inside an existing string?
 
-        ruby has a `.find()` function available on `str` types that tells you where another string appears – its **index**.
+        Ruby has a `.find()` function available on `str` types that tells you where another string appears – its **index**.
 
         ```ruby
         irb(main):001:0> "Ladies Learning Code".include?("Code")
@@ -1386,13 +1381,14 @@
         ```
 
         The `.inlcude?()` function is case-sensitive – it will only match the *exact* string you pass it, even if the only difference is `C` vs `c`.
-        *<!-- .element: class="footnote" --> When we said computers require **exact** instructions, we meant it!*
+        
+        *<!-- .element: class="note" --> When we said computers require **exact** instructions, we meant it!*
       </script>
     </section>
 
     <section class="slide" data-markdown>
       <script type="text/template">
-        # Exercise 5: Comparing Rent in Canadian Cities (15 mins)
+        # Exercise 5: Comparing Rent in Canadian Cities (20 mins)
         Now that you know how to find a string within a string, we are going to look at some more data!
         We are going to switch to using the file rent-data.csv, which is the file we will use in our final project!
 
@@ -1400,7 +1396,7 @@
 
         Remember, `.include?()` returns 'true' if the search string is in the row and 'false' if it is not.
 
-        Create a new file **ex5_city_rent_comparison.rb** and use what you've learned to find the rent prices in neighboring cities.
+        Open **ex5_city_rent_comparison.rb** and use what you've learned to find the rent prices in neighboring cities.
 
         * Print a list of cities in your chosen provinces
         * Print the city with the most expensive rent
@@ -1426,32 +1422,6 @@
           ![Nope, not doing that.](https://secure.static.tumblr.com/77ca0023625f97466d6949685a7a9a9a/ekdqlmj/jynndac2p/tumblr_static_tumblr_static_am0no65tjps84o0cs4wc4g8o4_640.gif)
 
         Computers will churn through repetitive tasks according to your instructions without stopping for coffee.
-
-
-      </script>
-    </section>
-
-    <section class="slide" data-markdown>
-      <script type="text/template">
-        # Ruby vs Ruby on Rails
-
-        ## Ruby
-
-        * is a programming language
-        * is what we've been learning today
-
-        ## Ruby on Rails
-
-        * is a web *framework* built with Ruby
-        * was extracted from work done on **Basecamp** at 37signals (2004)
-        * allows you to build fully functional web applications like **Twitter**
-
-        Check out these resources for Ruby on Rails beginners
-
-        * <a href="https://www.codecademy.com/learn/learn-rails">Codecademy</a>
-        * <a href="https://www.youtube.com/user/mackenziechild/featured">Mackenzie Child</a>
-
-
       </script>
     </section>
 
@@ -1471,6 +1441,28 @@
         **Bonus Exercise**: Use **selection sort** on your list!
 
         ![Nicki - Work it](http://33.media.tumblr.com/50d6e9b731ca0e739a04ed9255df3228/tumblr_mmjqcuNB9b1ql5yr7o1_500.gif)
+      </script>
+    </section>
+    
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        # Ruby vs Ruby on Rails
+
+        ## Ruby
+
+        * is a programming language
+        * is what we've been learning today
+
+        ## Ruby on Rails
+
+        * is a web *framework* built with Ruby
+        * was extracted from work done on **Basecamp** at 37signals (2004)
+        * allows you to build fully functional web applications like **Twitter**
+
+        Check out these resources for Ruby on Rails beginners
+
+        * <a href="https://www.codecademy.com/learn/learn-rails">Codecademy</a>
+        * <a href="https://www.youtube.com/user/mackenziechild/featured">Mackenzie Child</a>
       </script>
     </section>
 
